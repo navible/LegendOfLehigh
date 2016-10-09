@@ -66,7 +66,7 @@ for (_n=0; _n&lt;4; _n++)
         slotGems[_n] = ini_read_real("Player", "Gems", 0);
         slotLife[_n] = ini_read_real("Player", "Life", 5);
         slotHearts[_n] = ini_read_real("Player", "Hearts", 5);
-        slotLocation[_n] = ini_read_string("Location", "Room", rmTownNew);
+        slotLocation[_n] = ini_read_string("Location", "Room", rmStart);
         ini_close();
         }
     }

@@ -129,8 +129,7 @@ if (state == "Tap")
     
     draw_set_alpha(1.0);
     draw_sprite_stretched(sprTitleSplash, 0, 0, 0, room_width, room_height);
-    draw_sprite_ext(sprTitleLogo, 0, _xPos, 100, 0.5, 0.5, 0, c_white, titleFade);
-    
+        
     show++;
     if (show &gt; 30)
         show = -30;
@@ -146,7 +145,6 @@ else
     
     draw_set_alpha(1.0);
     draw_sprite_stretched(sprTitleSplash, 0, 0, 0, room_width, room_height);
-    draw_sprite_ext(sprTitleLogo, 0, _xCenter, 100, 0.5, 0.5, 0, c_white, titleFade);
     
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);

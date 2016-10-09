@@ -13,14 +13,6 @@ if (is_string(_index))
 // Retrieve name according to index
 switch (_index)
     {
-    case (rmTownNew): return "Dadioville";
-    case (rmForest):  return "The Forest";
-    case (rmDesert):  return "The Desert";
-    case (rmSnow): return "The Snowy Mountains";
-    case (rmDungeon): return "The Dungeon";
-    case (rmSnowCave1): return "Snow Cave 1";
-    case (rmSnowCave2): return "Snow Cave 2";
-    case (rmSkraggleRoom): return "SkraggeKlaw's Den";
-    case (rmDesertCave): return "Desert Cave";
+    case (rmStart): return "Start";
     default: return room_get_name(_index);
     }
