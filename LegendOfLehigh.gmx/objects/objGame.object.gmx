@@ -50,6 +50,10 @@ AnimationOrder(1, 1, 2);
 AnimationInit(2, 10, Animation.loop, bckAnimationTorch1, bckAnimationTorch2, bckAnimationTorch3, bckAnimationTorch4, bckAnimationTorch5);
 AnimationOrder(2, 1, 2, 3, 4, 5);
 
+global.battleX = -1;
+global.battleY = -1;
+global.objInst = -1;
+
 </string>
           </argument>
         </arguments>
@@ -169,7 +173,20 @@ else
         SaveGame(global.autoFile);
         }
     }
-
+if room != rmBattle {
+    if (global.battleX &gt;= 0 &amp;&amp; global.battleY &gt;= 0) {
+        objPlayerCharacter.x = global.battleX;
+        objPlayerCharacter.y = global.battleY;
+        global.battleX = -1;
+        global.battleY = -1;
+    }
+    if global.objInst &gt; 0 {
+        with (global.objInst) {
+            instance_destroy();
+        }
+        global.objInst = -1;
+    }
+}
 </string>
           </argument>
         </arguments>

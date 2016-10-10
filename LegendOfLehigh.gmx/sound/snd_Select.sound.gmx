@@ -9,10 +9,10 @@
   </volume>
   <pan>0</pan>
   <bitRates>
-    <bitRate>128</bitRate>
+    <bitRate>192</bitRate>
   </bitRates>
   <sampleRates>
-    <sampleRate>32000</sampleRate>
+    <sampleRate>44100</sampleRate>
   </sampleRates>
   <types>
     <type>0</type>

@@ -1545,6 +1545,7 @@
     <object>objects\objLoadGame</object>
     <object>objects\objDeathScreen</object>
     <object>objects\objConfirmation</object>
+    <object>objects\objBattle</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSplashGameMaker</room>
@@ -1555,6 +1556,7 @@
       <room>rooms\rmOptions</room>
     </rooms>
     <room>rooms\rmStart</room>
+    <room>rooms\rmBattle</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

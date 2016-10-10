@@ -28,6 +28,8 @@
             <string>
 face = NORTH;       // Is changed to character's direction on creation
 bonusDamage = 0;    // Is set when using special attack (see objPlayerCharacter.Step)
+global.objType = objScorpion;
+global.prevRoom = rmStart;
 
 image_index = 0;
 image_speed = 0.25;
@@ -160,20 +162,29 @@ PlaySound(snd_BushCut);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-with (other)
-    {
-    if (!beenHit)
+            <string>if room != rmBattle {
+    global.objType = other.object_index;
+    global.objInst = other.id;
+    global.prevRoom = room;
+    global.battleX = x;
+    global.battleY = y;
+    room_persistent = true;
+    room_goto(rmBattle);
+}
+else {
+    with (other)
         {
-        myLife -= objPlayer.equippedWeapon[ITEM_EFFECT]+other.bonusDamage;
-        state = STATE_STAGGER;
-        staggerTimer = 30;
-        face = GetOppositeDirection(objPlayerCharacter.face);
-        beenHit = true;
-        PlaySound(snd_GetHit);
+        if (!beenHit)
+            {
+            myLife -= objPlayer.equippedWeapon[ITEM_EFFECT]+other.bonusDamage;
+            state = STATE_STAGGER;
+            staggerTimer = 30;
+            face = GetOppositeDirection(objPlayerCharacter.face);
+            beenHit = true;
+            PlaySound(snd_GetHit);
+            }
         }
-    }
-
+}
 </string>
           </argument>
         </arguments>
