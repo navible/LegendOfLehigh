@@ -615,7 +615,9 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="Title">
+      <sprite>sprites\sprTitleLogo</sprite>
       <sprite>sprites\sprTitleSplash</sprite>
+      <sprite>sprites\sprTriforce</sprite>
       <sprite>sprites\sprExitButton</sprite>
       <sprite>sprites\sprLoadButton</sprite>
       <sprite>sprites\sprNewGameButton</sprite>
