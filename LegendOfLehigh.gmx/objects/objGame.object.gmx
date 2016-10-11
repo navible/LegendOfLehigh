@@ -186,6 +186,7 @@ if room != rmBattle {
         }
         global.objInst = -1;
     }
+    room_persistent = false;
 }
 </string>
           </argument>
