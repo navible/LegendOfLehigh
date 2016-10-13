@@ -1288,6 +1288,8 @@
       <background>background\tilesDesert</background>
       <background>background\tilesSnow</background>
       <background>background\tilesDungeon</background>
+      <background>background\tilesModernBuilding</background>
+      <background>background\tilesGrass</background>
     </backgrounds>
     <background>background\tilesShopPack</background>
     <backgrounds name="Foliage Pack 1">
