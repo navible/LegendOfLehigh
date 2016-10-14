@@ -1561,6 +1561,7 @@
     </rooms>
     <room>rooms\rmStart</room>
     <room>rooms\rmBattle</room>
+    <room>rooms\rmSTEPS</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
