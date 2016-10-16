@@ -260,10 +260,15 @@
     <instance objName="objWallSquare" x="2272" y="3648" name="inst_24F9131F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="2176" y="3584" name="inst_D82F1194" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="2112" y="3648" name="inst_6E127989" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objWallSquare" x="2016" y="3680" name="inst_6C506A7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="2048" y="3680" name="inst_6C506A7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="2048" y="3744" name="inst_34629E0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="2336" y="3392" name="inst_59A13F09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBlanker" x="3360" y="3456" name="instSTEPSEnter" locked="0" code="targetRoom = rmSTEPS;&#xA;targetDoor = instSTEPSExit;" scaleX="0.25" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="object63" x="2656" y="3264" name="inst_A14A734F" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="object63" x="2816" y="3296" name="inst_CDDC85D9" locked="0" code="" scaleX="-2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="object63" x="3008" y="3264" name="inst_59B72077" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="object63" x="2496" y="3296" name="inst_93866A2D" locked="0" code="" scaleX="-2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="object63" x="3136" y="3296" name="inst_14879DE1" locked="0" code="" scaleX="-2" scaleY="2" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tilesForest" x="1600" y="3936" w="32" h="32" xo="96" yo="96" id="10001246" name="inst_2DF464B9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

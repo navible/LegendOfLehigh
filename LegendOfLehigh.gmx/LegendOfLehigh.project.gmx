@@ -1248,6 +1248,30 @@
         </sprites>
       </sprites>
     </sprites>
+    <sprites name="JSP_Sprites">
+      <sprites name="Building">
+        <sprite>sprites\BuildingWall2</sprite>
+        <sprite>sprites\BuildingWall</sprite>
+        <sprite>sprites\InsideTile1</sprite>
+        <sprite>sprites\InsideTile2</sprite>
+      </sprites>
+      <sprites name="Stairs">
+        <sprite>sprites\StairsRight1</sprite>
+        <sprite>sprites\StairsRight2</sprite>
+        <sprite>sprites\StairsLeft1</sprite>
+        <sprite>sprites\StairsLeft2</sprite>
+        <sprite>sprites\StairsUp</sprite>
+        <sprite>sprites\StairsDown</sprite>
+      </sprites>
+      <sprites name="Rocks">
+        <sprite>sprites\Rock1</sprite>
+        <sprite>sprites\Rock2</sprite>
+        <sprite>sprites\Rock3</sprite>
+        <sprite>sprites\StoneTile</sprite>
+      </sprites>
+      <sprite>sprites\CopCar</sprite>
+      <sprite>sprites\sprite490</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Splash Screens">
@@ -1526,6 +1550,7 @@
     </objects>
     <objects name="Decoration">
       <object>objects\objTorch</object>
+      <object>objects\object63</object>
     </objects>
     <objects name="Quests">
       <object>objects\objQuestManager</object>
