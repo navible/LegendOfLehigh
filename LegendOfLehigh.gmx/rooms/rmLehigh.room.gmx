@@ -54,7 +54,6 @@
     <instance objName="objWallSquare" x="0" y="819" name="inst_ADDE7E4F" locked="0" code="" scaleX="128" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="1638" name="inst_19FBD7D4" locked="0" code="" scaleX="128" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="2457" name="inst_EA995D5C" locked="0" code="" scaleX="128" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPlayerCharacter" x="2944" y="4032" name="inst_771CA16F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="3552" y="3840" name="inst_5B2EF4DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="3552" y="3872" name="inst_896EF8E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="3552" y="3904" name="inst_C5D4A9AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -263,7 +262,7 @@
     <instance objName="objWallSquare" x="2048" y="3680" name="inst_6C506A7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="2048" y="3744" name="inst_34629E0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="2336" y="3392" name="inst_59A13F09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDoorBlanker" x="3360" y="3456" name="instSTEPSEnter" locked="0" code="targetRoom = rmSTEPS;&#xA;targetDoor = instSTEPSExit;" scaleX="0.25" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objAnimatedCharacter" x="2944" y="4032" name="inst_0537B5AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tilesForest" x="1600" y="3936" w="32" h="32" xo="96" yo="96" id="10001246" name="inst_2DF464B9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

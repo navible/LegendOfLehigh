@@ -38,7 +38,7 @@ color = c_black;                // The color to fade to
 steps = 1*room_speed;           // Speed of the transition
 destRoom = room_next(room);     // By default, we go to the next room
 transition = 1;
-
+stepCount = 0;
 </string>
           </argument>
         </arguments>
@@ -61,18 +61,22 @@ transition = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (transition &gt; 0)
-    {
-    transition -= 1/steps;
-    if (transition &lt;= 0)
-        {
-        if (fadeOut) room_goto(destRoom);   // Fade out has finished
-        else         instance_destroy();    // Fade in has finished, destroy!
-        transition = 0;                     // Transition to 0, to avoid... something
-        }
-    }
+            <string>if !fadeOut {
+    stepCount++;
+}
 
+if stepCount == 0 || stepCount &gt; 200 {
+    if (transition &gt; 0)
+        {
+        transition -= 1/steps;
+        if (transition &lt;= 0)
+            {
+            if (fadeOut) room_goto(destRoom);   // Fade out has finished
+            else         instance_destroy();    // Fade in has finished, destroy!
+            transition = 0;                     // Transition to 0, to avoid... something
+            }
+        }
+}
 </string>
           </argument>
         </arguments>

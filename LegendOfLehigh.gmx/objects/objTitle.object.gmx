@@ -33,12 +33,10 @@ buttonSelected = 0;
 titleFade = 0.0;
 triZoom = 0.0;
 
-global.character = "Boy";
-global.loadGame = false;
-
 show = 0;
 state = "Tap";
 
+stepCount = 0;
 </string>
           </argument>
         </arguments>
@@ -64,6 +62,11 @@ state = "Tap";
             <string>
 if (state == "Tap")
     {
+    if stepCount &gt; 2000 {
+        with (instance_create(0, 0, objTransition)) {
+            destRoom = rmGanonCastle;
+        }
+    }
     // Fade in title
     if (titleFade &lt; 1.0)
         titleFade += 1.0/room_speed;
@@ -74,8 +77,9 @@ if (state == "Tap")
     if (keyboard_check_pressed(ord("X")))
     || (keyboard_check_pressed(ord("Z")))
         state = "Menu";
+        
+    stepCount++;        
     }
-    
 else
     {
     // Fade in title

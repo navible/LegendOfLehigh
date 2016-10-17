@@ -921,6 +921,12 @@
         <sprite>sprites\sprSkraggleBones</sprite>
         <sprite>sprites\sprSkraggleMask</sprite>
       </sprites>
+      <sprites name="Ganon">
+        <sprite>sprites\sprGanonNormal</sprite>
+        <sprite>sprites\sprGanonBeserk</sprite>
+        <sprite>sprites\sprGanonSpell</sprite>
+        <sprite>sprites\sprBolt</sprite>
+      </sprites>
     </sprites>
     <sprites name="Obstacles">
       <sprite>sprites\sprWallSquare</sprite>
@@ -993,6 +999,7 @@
       <sprite>sprites\sprAvatarSnowScorpion</sprite>
       <sprite>sprites\sprAvatarDesertScorpion</sprite>
       <sprite>sprites\sprAvatarForestScorpion</sprite>
+      <sprite>sprites\sprAvatarGanon</sprite>
     </sprites>
     <sprites name="Interface">
       <sprite>sprites\sprPanels</sprite>
@@ -1248,30 +1255,6 @@
         </sprites>
       </sprites>
     </sprites>
-    <sprites name="JSP_Sprites">
-      <sprites name="Building">
-        <sprite>sprites\BuildingWall2</sprite>
-        <sprite>sprites\BuildingWall</sprite>
-        <sprite>sprites\InsideTile1</sprite>
-        <sprite>sprites\InsideTile2</sprite>
-      </sprites>
-      <sprites name="Stairs">
-        <sprite>sprites\StairsRight1</sprite>
-        <sprite>sprites\StairsRight2</sprite>
-        <sprite>sprites\StairsLeft1</sprite>
-        <sprite>sprites\StairsLeft2</sprite>
-        <sprite>sprites\StairsUp</sprite>
-        <sprite>sprites\StairsDown</sprite>
-      </sprites>
-      <sprites name="Rocks">
-        <sprite>sprites\Rock1</sprite>
-        <sprite>sprites\Rock2</sprite>
-        <sprite>sprites\Rock3</sprite>
-        <sprite>sprites\StoneTile</sprite>
-      </sprites>
-      <sprite>sprites\CopCar</sprite>
-      <sprite>sprites\sprite490</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background">
     <backgrounds name="Splash Screens">
@@ -1327,13 +1310,16 @@
     <scripts name="HUD">
       <script>scripts\DrawLifeHearts.gml</script>
       <script>scripts\DrawEquippedWeapon.gml</script>
+      <script>scripts\DrawWeapon.gml</script>
       <script>scripts\DrawCoinsCounter.gml</script>
     </scripts>
     <scripts name="Misc Functions">
       <script>scripts\draw_text_outline.gml</script>
       <script>scripts\PlaySound.gml</script>
       <script>scripts\NewGame.gml</script>
+      <script>scripts\Animate.gml</script>
       <script>scripts\EndGame.gml</script>
+      <script>scripts\CleanAnimation.gml</script>
       <script>scripts\RestartGame.gml</script>
       <script>scripts\Debug.gml</script>
       <script>scripts\Array2List.gml</script>
@@ -1356,6 +1342,9 @@
       <script>scripts\SetSpritesNPCMale.gml</script>
       <script>scripts\SetSpritesNPCFemale.gml</script>
       <script>scripts\SetSpritesSkraggleKlaw.gml</script>
+      <script>scripts\SetSpritesGanonNormal.gml</script>
+      <script>scripts\SetSpritesGanonBeserk.gml</script>
+      <script>scripts\SetSpritesGanonSpell.gml</script>
       <script>scripts\SetSpritesScorpion.gml</script>
       <script>scripts\SetSpritesSnowScorpion.gml</script>
       <script>scripts\SetSpritesDesertScorpion.gml</script>
@@ -1382,6 +1371,7 @@
     </scripts>
     <scripts name="Dialogue">
       <script>scripts\ShowDialogue.gml</script>
+      <script>scripts\ShowDialogueAnimate.gml</script>
       <script>scripts\DialogueHandleOutcome.gml</script>
       <script>scripts\DialogueSetDefaults.gml</script>
       <script>scripts\DialogueBegin.gml</script>
@@ -1418,6 +1408,7 @@
         <scripts name="Update">
           <script>scripts\QuestUpdateStart.gml</script>
           <script>scripts\QuestUpdate.gml</script>
+          <script>scripts\QuestUpdateAnimate.gml</script>
           <script>scripts\QuestComplete.gml</script>
           <script>scripts\QuestHandIn.gml</script>
           <script>scripts\QuestStart.gml</script>
@@ -1446,6 +1437,7 @@
         </scripts>
         <scripts name="Events">
           <script>scripts\EventLog.gml</script>
+          <script>scripts\EventLogAnimate.gml</script>
           <script>scripts\EventScanStart.gml</script>
           <script>scripts\EventScanAdvanceTo.gml</script>
         </scripts>
@@ -1480,17 +1472,23 @@
   </fonts>
   <objects name="objects">
     <object>objects\objGame</object>
+    <object>objects\objGameAnimate</object>
     <objects name="Player">
       <object>objects\objPlayer</object>
+      <object>objects\objPlayerAnimate</object>
       <object>objects\objPlayerCharacter</object>
+      <object>objects\objAnimatedCharacter</object>
       <object>objects\objPlayerStrike</object>
+      <object>objects\objAnimatedStrike</object>
     </objects>
     <objects name="Mobiles">
       <objects name="Parents">
         <object>objects\parMobile</object>
         <object>objects\parMortal</object>
+        <object>objects\parMortalAnimate</object>
         <object>objects\parNpc</object>
         <object>objects\parEnemy</object>
+        <object>objects\parEnemyAnimate</object>
       </objects>
       <objects name="Dociles">
         <object>objects\objChicken</object>
@@ -1499,14 +1497,18 @@
         <object>objects\objScorpion</object>
         <object>objects\objSnowScorpions</object>
         <object>objects\objDesertScorpion</object>
+        <object>objects\objScorpionAnimate</object>
         <object>objects\objSnowMonster</object>
         <object>objects\objForestMonster</object>
+        <object>objects\objMonsterAnimate</object>
+        <object>objects\objBolt</object>
       </objects>
       <objects name="NPCs">
         <object>objects\objTestNpc</object>
       </objects>
       <objects name="Bosses">
         <object>objects\objSkraggleKlaw</object>
+        <object>objects\objGanon</object>
       </objects>
     </objects>
     <objects name="Obstacles">
@@ -1536,6 +1538,7 @@
     </objects>
     <objects name="Dialogue">
       <object>objects\objDialogueBox</object>
+      <object>objects\objDialogueBoxAnimate</object>
     </objects>
     <objects name="Transit">
       <object>objects\parDoor</object>
@@ -1550,23 +1553,28 @@
     </objects>
     <objects name="Decoration">
       <object>objects\objTorch</object>
-      <object>objects\object63</object>
     </objects>
     <objects name="Quests">
       <object>objects\objQuestManager</object>
+      <object>objects\objQuestManagerAnimate</object>
       <object>objects\objQuestMarker</object>
     </objects>
     <objects name="Pause Menus">
       <object>objects\parPauseMenu</object>
       <object>objects\objInventory</object>
+      <object>objects\objInventoryAnimate</object>
       <object>objects\objOptions</object>
+      <object>objects\objOptionsAnimate</object>
       <object>objects\objSaveLoad</object>
+      <object>objects\objSaveLoadAnimate</object>
     </objects>
     <object>objects\objTitle</object>
     <object>objects\objTransition</object>
+    <object>objects\objTransitionAnimate</object>
     <object>objects\objPickupNotification</object>
     <object>objects\objNewObject</object>
     <object>objects\objMusicPlayer</object>
+    <object>objects\objMusicPlayerAnimate</object>
     <object>objects\objSplashScreen</object>
     <object>objects\objConstants</object>
     <object>objects\objCheckpoint</object>
@@ -1578,6 +1586,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmSplashGameMaker</room>
+    <room>rooms\rmGanonCastle</room>
+    <room>rooms\rmGanonRoom</room>
+    <room>rooms\rmLehigh</room>
     <rooms name="Title">
       <room>rooms\rmTitle</room>
       <room>rooms\rmSlotSelect</room>

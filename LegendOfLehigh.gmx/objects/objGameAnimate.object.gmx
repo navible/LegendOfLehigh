@@ -19,25 +19,40 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>other</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-//  This object handles the fading transition from one room to another (or the same).
-//  This works by the object being persistent, so after the fade to black and going to
-//  the next room, it still exists! Then, it's just a matter of fading back in. Simple!
-//  Other clear-to-screen transitions can be done in te same way. And this object is
-//  simple to port to another project.
-//
+            <string>
+// Some machines may treat tiles differently with interpolation on (we'll switch it back on for large scaled images etc.)
+texture_set_interpolation(false);
 
-fadeOut = true;                 // Whether we are fading IN or OUT
-color = c_black;                // The color to fade to
-steps = 1*room_speed;           // Speed of the transition
-destRoom = room_next(room);     // By default, we go to the next room
-transition = 1;
+// Variables for game saving
+lastCheckpointRoom = room;
+persistanceEvents = ds_list_create();
+
+// Variables for pausing the game
+isPaused = false;       // Game is actually paused
+userPaused = false;     // User commanded pause
+forcePaused = true;     // Something forced pause
+
+// Setup water animation
+AnimationInit(0, 10, Animation.loop, bckAnimationWater1, bckAnimationWater2, bckAnimationWater3, bckAnimationWater4, bckAnimationWater5);
+AnimationOrder(0, 1, 2, 3, 2, 1, 4, 5, 4);
+
+// Setup flower animation
+AnimationInit(1, 30, Animation.loop, bckAnimationFlowers1, bckAnimationFlowers2);
+AnimationOrder(1, 1, 2);
+
+// Setup torch animation
+AnimationInit(2, 10, Animation.loop, bckAnimationTorch1, bckAnimationTorch2, bckAnimationTorch3, bckAnimationTorch4, bckAnimationTorch5);
+AnimationOrder(2, 1, 2, 3, 4, 5);
+
+global.battleX = -1;
+global.battleY = -1;
+global.objInst = -1;
 
 </string>
           </argument>
@@ -62,15 +77,57 @@ transition = 1;
           <argument>
             <kind>1</kind>
             <string>
-if (transition &gt; 0)
+//-----------------------------------------------------------------------------
+// Hotkey saving
+if (keyboard_check_pressed(vk_f5))
+    SaveGame(global.saveFile);
+
+//-----------------------------------------------------------------------------
+// Pausing
+
+// Toggle
+if ((keyboard_check_pressed(KEY_INVENTORY_OPEN))
+|| (keyboard_check_pressed(vk_escape)))
+&amp;&amp; (!instance_exists(objTransition))
+&amp;&amp; (!instance_exists(objDialogueBox))
+&amp;&amp; (objPlayerAnimate.life &gt; 0)
     {
-    transition -= 1/steps;
-    if (transition &lt;= 0)
+    if (!objInventoryAnimate.visible)
+    &amp;&amp; (!objOptionsAnimate.visible)
+    &amp;&amp; (!objSaveLoadAnimate.visible)
         {
-        if (fadeOut) room_goto(destRoom);   // Fade out has finished
-        else         instance_destroy();    // Fade in has finished, destroy!
-        transition = 0;                     // Transition to 0, to avoid... something
+        with (parPauseMenu) on = onTitle;
+        with (objInventoryAnimate) selection = 0;
+            
+        if (keyboard_check_pressed(KEY_INVENTORY_OPEN))
+            objInventory.visible = true;
+        if (keyboard_check_pressed(vk_escape))
+            objSaveLoad.visible = true;
         }
+    else with (parPauseMenu)
+        visible = false;
+    }
+
+// Something else requires a force pause
+forcePaused = (instance_exists(objTransition));
+with (objInventoryAnimate)    objGameAnimate.forcePaused |= visible;
+with (objOptionsAnimate)      objGameAnimate.forcePaused |= visible;
+with (objSaveLoadAnimate)     objGameAnimate.forcePaused |= visible;
+with (objConfirmation)        objGameAnimate.forcePaused |= visible;
+
+// User decides to pause
+if (keyboard_check_pressed(KEY_PAUSE))
+    userPaused ^= true;
+
+// Actually pause
+isPaused = (userPaused | forcePaused);
+
+// Do animations
+if (!isPaused)
+    {
+    AnimationAnimate(0);
+    AnimationAnimate(1);
+    AnimationAnimate(2);
     }
 
 </string>
@@ -96,16 +153,32 @@ if (transition &gt; 0)
           <argument>
             <kind>1</kind>
             <string>
-// In new room, setup to fade in
-fadeOut = false;
-transition = 1;
+if (global.loadGame)
+    {
+    global.loadGame = false;
+    lastCheckpointRoom = room;
+    
+    if (instance_exists(objCheckpoint))
+        {
+        objAnimatedCharacter.x = objCheckpoint.x;
+        objAnimatedCharacter.y = objCheckpoint.y;
+        }
+    }
 
+else
+    {
+    if (instance_exists(objCheckpoint))
+        {
+        lastCheckpointRoom = room;
+        SaveGame(global.autoFile);
+        }
+    }
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="75">
+    <event eventtype="8" enumb="72">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -123,15 +196,8 @@ transition = 1;
           <argument>
             <kind>1</kind>
             <string>
-// Set alpha depending on fade IN/OUT
-if (fadeOut) draw_set_alpha(1.0-transition);
-else         draw_set_alpha(transition);
-
-// Draw, you could even replace this with an image! (Helpful if the target room takes a while to load)
-draw_set_color(color);
-draw_rectangle(0, 0, browser_width, browser_height, false);
-
-// Reset alpha
+// Reset drawing (to fix automatic sprite drawing, which for some reason picks up alpha changes)
+draw_set_color(c_white);
 draw_set_alpha(1.0);
 
 </string>
