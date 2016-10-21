@@ -1309,9 +1309,11 @@
   <scripts name="scripts">
     <scripts name="HUD">
       <script>scripts\DrawLifeHearts.gml</script>
+      <script>scripts\DrawXPBar.gml</script>
       <script>scripts\DrawEquippedWeapon.gml</script>
       <script>scripts\DrawWeapon.gml</script>
       <script>scripts\DrawCoinsCounter.gml</script>
+      <script>scripts\DrawLevelUp.gml</script>
     </scripts>
     <scripts name="Misc Functions">
       <script>scripts\draw_text_outline.gml</script>
@@ -1462,13 +1464,17 @@
     <script>scripts\ConfirmSlot.gml</script>
     <script>scripts\ConfirmSave.gml</script>
     <script>scripts\ConfirmLoad.gml</script>
+    <script>scripts\HitPlayer.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\fntHud</font>
+    <font>fonts\fntNum</font>
+    <font>fonts\fntLevel</font>
+    <font>fonts\fntUp</font>
     <font>fonts\fntDialogue</font>
     <font>fonts\fntInformation</font>
-    <font>fonts\fntNotification</font>
     <font>fonts\fntInterface</font>
+    <font>fonts\fntNotification</font>
+    <font>fonts\fntHud</font>
   </fonts>
   <objects name="objects">
     <object>objects\objGame</object>

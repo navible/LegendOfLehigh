@@ -104,6 +104,11 @@ if stepCount == 0 || stepCount &gt; 200 {
 fadeOut = false;
 transition = 1;
 
+if room == rmStart {
+    instance_create(objPlayerCharacter.x, objPlayerCharacter.y, objAnimatedCharacter);
+    with (objPlayerCharacter) instance_destroy();
+    with (objDoorBlanker) instance_destroy();
+}
 </string>
           </argument>
         </arguments>

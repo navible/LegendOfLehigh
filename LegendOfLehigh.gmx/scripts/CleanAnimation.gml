@@ -13,3 +13,4 @@ with (objOptionsAnimate) instance_destroy();
 with (objSaveLoadAnimate) instance_destroy();
 with (objPlayerAnimate) instance_destroy();
 with (objMusicPlayerAnimate) instance_destroy();
+with (objDialogueBoxAnimate) instance_destroy();

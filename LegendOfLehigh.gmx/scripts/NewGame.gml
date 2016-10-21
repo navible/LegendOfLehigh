@@ -17,4 +17,3 @@ instance_create(0, 0, objSaveLoad);
 instance_create(0, 0, objMusicPlayer);
 instance_create(0, 0, objQuestManager);
 instance_create(0, 0, objBattle);
-

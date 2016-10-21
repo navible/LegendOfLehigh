@@ -483,11 +483,13 @@ if room == rmGanonRoom {
             tile_layer_delete(1000000);
             tile_layer_delete(900000);
             tile_layer_delete(800000);
-            instance_create(0, 0, objTransitionAnimate);
+            with (instance_create(0, 0, objTransitionAnimate)) {
+                destRoom = rmStart;
+            }
             break;
     }
 }
-if room == rmLehigh {
+if room == rmStart {
     z = 960 * (0.01 * zoom);
     w = 576 * (0.01 * zoom);
     if z &gt; 960 &amp;&amp; z &lt;= 4096 {

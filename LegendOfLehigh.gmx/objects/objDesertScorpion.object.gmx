@@ -140,12 +140,7 @@ switch (state)
                 {
                 if (!objPlayerCharacter.beenHit)
                     {
-                    PlaySound(snd_GetHit);
-                    objPlayer.life--;
-                    objPlayerCharacter.beenHit = true;
-                    objPlayerCharacter.staggerTimer = 0.5*room_speed;
-                    objPlayerCharacter.face = GetOppositeDirection(face);
-                    show_debug_message("Hit by enemy: "+string(object_get_name(object_index)));
+                    HitPlayer();
                     }
                 }
             }

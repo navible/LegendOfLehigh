@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>parMobile</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,17 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-permadeath = false;
-hide = false;
-beenHit = false;
-
+            <string>str = "";
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,67 +48,11 @@ beenHit = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (myLife &lt;= 0)
-    hide = true;
-
-
-if (hide)
-    {
-    PlaySound(snd_EnemyDeath);
-    EventLog("EnemyDefeated", object_index);
-    QuestUpdate();
-    
-    if (permadeath)
-        {
-        instance_destroy();
-        exit;
-        }
-    
-    // Spawn death bones effect
-    if (spriteDeathBits != -1)
-        {
-        var _n, _x, _y;
-        for (_n=0; _n&lt;sprite_get_number(sprScorpionBones); _n++)
-            {
-            _x = x+lengthdir_x(16+random(32), random(360));
-            _y = y+lengthdir_y(16+random(32), random(360));
-            _newItem = instance_create(x, y, objNewObject);
-            _newItem.sprite_index = spriteDeathBits;
-            _newItem.image_index = _n;
-            _newItem.destX = _x;
-            _newItem.destY = _y;
-            }
-        }
-    else
-        {
-        var _i;
-        _newItem = instance_create(x, y, objNewObject);
-        _i = id;
-        _newItem.face = face;
-        with (_newItem) SetSpriteFromFace(_i.spriteDeathNorth, _i.spriteDeathSouth, _i.spriteDeathEast, _i.spriteDeathWest);
-        _newItem.image_index = 0;
-        _newItem.image_speed = 0.3;
-        _newItem.animate = true;
-        }
-    
-    // Randomly spawn a gem drop
-    if (irandom(8) == 0)
-        instance_create(x+16, y+16, objGreenGem);
-    
-    with (objPlayer) {
-        xp++;
-    }
-    
-    // Deactivate this instance to hide it
-    // It is reactivated in objPlayer's Room Start event
-    hide = false;                       // We can reset this, as this instance is deactivated now anyway
-    myLife = life;                      // Restore life points
-    beenHit = false;
-    x = xstart;                         // Restore to starting X position
-    y = ystart;                         // Restore to starting Y position
-    instance_deactivate_object(id);     // Deactivate (truly hidden)
-    }
+            <string>draw_set_font(fntUp);
+draw_set_color(c_black);
+repeat (10) {
+    draw_text(objPlayerCharacter.x, objPlayerCharacter.y, "Level Up!");
+}
 
 </string>
           </argument>

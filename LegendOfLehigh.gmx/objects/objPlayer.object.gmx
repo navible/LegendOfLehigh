@@ -31,8 +31,18 @@ global.spawnDoor = -1;
 
 // Starting stats
 hearts = 5;     // Total health capacity
-life = 5;       // Current health
+life = 5.0;       // Current health
 coins = 100;
+attack = 1;
+defense = 1;
+
+// Levels
+prevlevel = 1;
+level = 1;
+xp = 0;
+maxXp = (10 + (level - 1)) * level;
+steps = 0;
+str = "";
 
 // Stats for currently equipped weapon
 equippedWeapon = ItemGetRubbishSword();
@@ -65,6 +75,80 @@ equippedArmour = 0;
 //RestartGame();
 instance_create(0, 0, objDeathScreen);
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if level &lt; 99 {
+    if xp &gt;= maxXp {
+        xp = 0;
+        level++;
+        maxXp = (10 + (level - 1)) * level;
+        switch (level % 2) {
+            case 0:
+                attack++;
+                str = "Attack Up!";
+                break;
+            case 1:
+                defense++;
+                str = "Defense Up!";
+                break;
+        }
+        if hearts &lt; 20 {
+            switch (level % 5) {
+                case 0:
+                    hearts++;
+                    life = hearts;
+                    str += " &amp; Life Up!";
+                    break;
+            }
+        }
+    }
+}
+else {
+    xp = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="107">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>xp++;
 </string>
           </argument>
         </arguments>
@@ -222,8 +306,42 @@ if (_show)
     DrawLifeHearts(display_get_gui_width()-32, 48);
     DrawEquippedWeapon(48, 48);
     DrawCoinsCounter(96, 48);
+    DrawXPBar(48, display_get_gui_height()-24);
     }
+    
+if prevlevel &lt; level {
+    DrawLevelUp(display_get_gui_width()/2, display_get_gui_height()/2);
+    steps++;
+}
+if steps &gt; 100 {
+    steps = 0;
+    prevlevel = level;
+}
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="109">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>face = NORTH;
+HitPlayer();
 </string>
           </argument>
         </arguments>

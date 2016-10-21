@@ -176,7 +176,7 @@ else {
         {
         if (!beenHit)
             {
-            myLife -= objPlayer.equippedWeapon[ITEM_EFFECT]+other.bonusDamage;
+            myLife -= objPlayer.attack+objPlayer.equippedWeapon[ITEM_EFFECT]+other.bonusDamage-1;
             state = STATE_STAGGER;
             staggerTimer = 30;
             face = GetOppositeDirection(objPlayerCharacter.face);
