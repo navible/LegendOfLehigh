@@ -1304,6 +1304,9 @@
       <background>background\tilesTreePack1_Desert</background>
       <background>background\tilesTreePack1_Snow</background>
     </backgrounds>
+    <background>background\background31</background>
+    <background>background\background32</background>
+    <background>background\background33</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
