@@ -64,13 +64,13 @@ endFade = -1;           // Holds number of steps we've been fading
           <argument>
             <kind>1</kind>
             <string>
-// Select which music track should be playing
-//switch (room)
-    //{
-    //case (rmTown):    currentTrack = musicTown; break;
-    //case (rmForest):  currentTrack = musicForest; break;
-    //case (rmDungeon): currentTrack = musicDungeon; break;
-    //}
+//Select which music track should be playing
+switch (room)
+    {
+    case (rmTitle): currentTrack = sndTitleTheme; break;
+    case (rmStart): currentTrack = sndOverworldTheme; break;
+    case (rmSTEPS): currentTrack = sndSTEPS; break;
+    }
 
 
 // If there is a track selected

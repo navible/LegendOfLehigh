@@ -63,6 +63,8 @@ stepCount = 0;
 if (state == "Tap")
     {
     if stepCount &gt; 2000 {
+        audio_stop_sound(sndTitleTheme);
+        with (objMusicPlayer) instance_destroy();
         with (instance_create(0, 0, objTransition)) {
             destRoom = rmGanonCastle;
         }

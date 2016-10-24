@@ -65,12 +65,12 @@ endFade = -1;           // Holds number of steps we've been fading
             <kind>1</kind>
             <string>
 // Select which music track should be playing
-//switch (room)
-    //{
-    //case (rmTown):    currentTrack = musicTown; break;
-    //case (rmForest):  currentTrack = musicForest; break;
-    //case (rmDungeon): currentTrack = musicDungeon; break;
-    //}
+switch (room)
+    {
+    case (rmGanonCastle):    currentTrack = sndGanonCastle; break;
+    case (rmGanonRoom):  currentTrack = sndGanonRoom; break;
+    case (rmStart): currentTrack = sndLehighArrival; break;
+    }
 
 
 // If there is a track selected
@@ -96,7 +96,7 @@ if (currentTrack != -1)
             }
             
         // Fade in new track
-        audio_play_sound(currentTrack, 0, true);
+        audio_play_sound(currentTrack, 0, false);
         audio_sound_gain(currentTrack, 0.0, 0);
         audio_sound_gain(currentTrack, 1.0, 1000);
         show_debug_message("Audio: Fading IN new track!");

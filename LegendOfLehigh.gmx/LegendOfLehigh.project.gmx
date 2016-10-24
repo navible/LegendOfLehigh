@@ -612,6 +612,14 @@
       <sound>sound\snd_StorePositiveDing</sound>
       <sound>sound\snd_StoreNegativeDing</sound>
     </sounds>
+    <sounds name="Music">
+      <sound>sound\sndGanonCastle</sound>
+      <sound>sound\sndGanonRoom</sound>
+      <sound>sound\sndLehighArrival</sound>
+      <sound>sound\sndOverworldTheme</sound>
+      <sound>sound\sndSTEPS</sound>
+      <sound>sound\sndTitleTheme</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="Title">
