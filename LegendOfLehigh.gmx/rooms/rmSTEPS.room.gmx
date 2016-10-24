@@ -92,10 +92,18 @@
     <instance objName="objSquirrel" x="128" y="96" name="inst_D286C772" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="576" y="160" name="inst_B7D1CB8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="1184" y="544" name="inst_E63A5B18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="sprSquirrelKing" x="448" y="512" name="inst_E45A7A6C" locked="0" code="stay = true;&#xA;permadeath = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSquirrelKing" x="448" y="512" name="inst_E45A7A6C" locked="0" code="stay = true;&#xA;permadeath = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objChest" x="448" y="320" name="inst_BC981CF5" locked="0" code="containsItem = true;&#xA;item = ItemGetTeleportOrb();&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerCharacter" x="1216" y="96" name="inst_67D78C40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSign" x="1472" y="608" name="instTeleportConsole" locked="0" code="" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objWallSquare" x="1248" y="192" name="inst_96BA1026" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1248" y="224" name="inst_2157FECB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1280" y="192" name="inst_0A4A9DEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1280" y="224" name="inst_76CB2C32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1280" y="256" name="inst_30AEB7F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1280" y="288" name="inst_4891406E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1312" y="224" name="inst_7A4A7A0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="1312" y="256" name="inst_F34BA264" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="background32" x="224" y="320" w="32" h="32" xo="32" yo="160" id="10018345" name="inst_9E6989E6" depth="900001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

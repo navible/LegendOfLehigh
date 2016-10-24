@@ -44,7 +44,7 @@ docile = false;     // Whether this mob is docile (non-agressive)
 myLife = life;
 paces = 0;
 face = choose(NORTH, EAST, SOUTH, WEST);
-canMove = true;
+canMove = false;
 horiSpeed = 0;
 vertSpeed = 0;
 state = STATE_IDLE;
@@ -158,6 +158,7 @@ switch (state)
         break;
         
     case (STATE_STAGGER):
+        canMove = true;
         staggerTimer--;
         if (staggerTimer &lt;= 0)
             {

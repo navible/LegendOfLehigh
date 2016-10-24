@@ -1561,7 +1561,7 @@
       </objects>
       <objects name="Bosses">
         <object>objects\objSkraggleKlaw</object>
-        <object>objects\sprSquirrelKing</object>
+        <object>objects\objSquirrelKing</object>
         <object>objects\objGanon</object>
       </objects>
     </objects>

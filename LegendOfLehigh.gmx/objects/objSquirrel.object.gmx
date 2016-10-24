@@ -158,6 +158,7 @@ switch (state)
         break;
         
     case (STATE_STAGGER):
+        canMove = true;
         staggerTimer--;
         if (staggerTimer &lt;= 0)
             {
