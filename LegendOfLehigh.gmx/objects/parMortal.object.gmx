@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>stay = false;
 permadeath = false;
 hide = false;
 beenHit = false;
@@ -62,12 +62,6 @@ if (hide)
     PlaySound(snd_EnemyDeath);
     EventLog("EnemyDefeated", object_index);
     QuestUpdate();
-    
-    if (permadeath)
-        {
-        instance_destroy();
-        exit;
-        }
     
     // Spawn death bones effect
     if (spriteDeathBits != -1)
@@ -111,9 +105,14 @@ if (hide)
     beenHit = false;
     x = xstart;                         // Restore to starting X position
     y = ystart;                         // Restore to starting Y position
+    if permadeath {
+        persistent = true;
+    }
+    else {
+        instance_destroy();
+    }
     instance_deactivate_object(id);     // Deactivate (truly hidden)
     }
-
 </string>
           </argument>
         </arguments>

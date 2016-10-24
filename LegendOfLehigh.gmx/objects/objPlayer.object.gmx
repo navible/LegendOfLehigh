@@ -28,6 +28,7 @@
             <string>
 // ID of door to spawn at
 global.spawnDoor = -1;
+global.prevRoom = rmStart;
 
 // Starting stats
 hearts = 5;     // Total health capacity
@@ -120,6 +121,9 @@ instance_create(0, 0, objDeathScreen);
                     str += " &amp; Life Up!";
                     break;
             }
+        }
+        with (instance_create(objPlayerCharacter.x, objPlayerCharacter.y, objPickupNotification)) {
+            text = objPlayer.str;
         }
     }
 }
@@ -250,7 +254,6 @@ if (global.spawnDoor != -1)
 // Activate all "hidden" objects
 instance_activate_object(objGrass);
 instance_activate_object(objPot);
-instance_activate_object(parMortal);
 
 // Reset spawn door and player character variables
 global.spawnDoor = -1;
@@ -310,7 +313,6 @@ if (_show)
     }
     
 if prevlevel &lt; level {
-    DrawLevelUp(display_get_gui_width()/2, display_get_gui_height()/2);
     steps++;
 }
 if steps &gt; 100 {

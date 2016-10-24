@@ -22,6 +22,7 @@ if (!instance_exists(objTransition))
     instance_create(0, 0, objSaveLoad);
     instance_create(0, 0, objMusicPlayer);
     instance_create(0, 0, objQuestManager);
+    instance_create(0, 0, objBattle);
     
     // Actual loading...
     ini_open(global.loadFile);
@@ -31,12 +32,19 @@ if (!instance_exists(objTransition))
     show_debug_message("Associated file name: "+global.saveFile);
     
     // Room
-    _transition.destRoom = asset_get_index(ini_read_string("Location", "Room", rmTownNew));
+    _transition.destRoom = asset_get_index(ini_read_string("Location", "Room", rmStart));
+    objGame.teleportX = ini_read_real("Location", "X", -1);
+    objGame.teleportY = ini_read_real("Location", "Y", -1);
     
     // Player stats
     objPlayer.coins = ini_read_real("Player", "Gems", 0);
     objPlayer.hearts = ini_read_real("Player", "Hearts", 5);
     objPlayer.life = ini_read_real("Player", "Life", 5);
+    objPlayer.level = ini_read_real("Player", "Level", 1);
+    objPlayer.xp = ini_read_real("Player", "XP", 0);
+    objPlayer.maxXp = (10 + (objPlayer.level - 1)) * objPlayer.level;
+    objPlayer.attack = 1 + (objPlayer.level / 2);
+    objPlayer.defense = 1 + ((objPlayer.level - 1) / 2); 
     global.character = ini_read_string("Player", "Character", "Boy");
     
     // Inventory
@@ -61,3 +69,4 @@ if (!instance_exists(objTransition))
     }
     
 show_debug_message("");
+

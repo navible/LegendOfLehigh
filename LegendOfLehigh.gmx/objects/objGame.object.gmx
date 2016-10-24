@@ -53,7 +53,10 @@ AnimationOrder(2, 1, 2, 3, 4, 5);
 global.battleX = -1;
 global.battleY = -1;
 global.objInst = -1;
-
+teleportX = -1;
+teleportY = -1;
+layerDeac = -1;
+wallType = objWallSquare;
 </string>
           </argument>
         </arguments>
@@ -167,7 +170,7 @@ if (global.loadGame)
 
 else
     {
-    if (instance_exists(objCheckpoint))
+    if (room != rmBattle)
         {
         lastCheckpointRoom = room;
         SaveGame(global.autoFile);
@@ -187,6 +190,18 @@ if room != rmBattle {
         global.objInst = -1;
     }
     room_persistent = false;
+}
+if (teleportX &gt;= 0 &amp;&amp; teleportY &gt;= 0) {
+    objPlayerCharacter.x = teleportX;
+    objPlayerCharacter.y = teleportY;
+    teleportX = -1;
+    teleportY = -1;
+}
+if layerDeac &gt;= 0 {
+    tile_layer_delete(layerDeac);
+}
+if wallType != objWallSquare {
+    with (wallType) instance_destroy();
 }
 </string>
           </argument>

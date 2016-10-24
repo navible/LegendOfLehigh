@@ -53,6 +53,7 @@ globalvar ITEM_VALUE;       ITEM_VALUE       = 8;
 globalvar ITEM_TYPE_WEAPON;        ITEM_TYPE_WEAPON = 1;
 globalvar ITEM_TYPE_PLACEABLE;     ITEM_TYPE_PLACEABLE = 2;
 globalvar ITEM_TYPE_POTION_HEALTH; ITEM_TYPE_POTION_HEALTH = 3;
+globalvar ITEM_TYPE_ITEM;          ITEM_TYPE_ITEM = 4;
 
 globalvar NORTH; NORTH = 0;
 globalvar EAST;  EAST  = 2;

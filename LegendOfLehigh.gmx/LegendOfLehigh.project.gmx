@@ -862,6 +862,33 @@
             <sprite>sprites\sprForestMonsterDieEast</sprite>
           </sprites>
         </sprites>
+        <sprites name="Squirrel">
+          <sprites name="Walk">
+            <sprite>sprites\sprSquirrelWalkEast</sprite>
+            <sprite>sprites\sprSquirrelWalkWest</sprite>
+            <sprite>sprites\sprSquirrelWalkSouth</sprite>
+            <sprite>sprites\sprSquirrelWalkNorth</sprite>
+          </sprites>
+          <sprites name="Idle">
+            <sprite>sprites\sprSquirrelIdleEast</sprite>
+            <sprite>sprites\sprSquirrelIdleWest</sprite>
+            <sprite>sprites\sprSquirrelIdleSouth</sprite>
+            <sprite>sprites\sprSquirrelIdleNorth</sprite>
+          </sprites>
+          <sprites name="Attack">
+            <sprite>sprites\sprSquirrelAttackEast</sprite>
+            <sprite>sprites\sprSquirrelAttackWest</sprite>
+            <sprite>sprites\sprSquirrelAttackSouth</sprite>
+            <sprite>sprites\sprSquirrelAttackNorth</sprite>
+          </sprites>
+          <sprites name="Stagger">
+            <sprite>sprites\sprSquirrelStaggerEast</sprite>
+            <sprite>sprites\sprSquirrelStaggerWest</sprite>
+            <sprite>sprites\sprSquirrelStaggerSouth</sprite>
+            <sprite>sprites\sprSquirrelStaggerNorth</sprite>
+          </sprites>
+          <sprite>sprites\sprSquirrelDeathBones</sprite>
+        </sprites>
       </sprites>
       <sprites name="NPCSprites">
         <sprites name="Male">
@@ -981,6 +1008,7 @@
       </sprites>
       <sprites name="Icons">
         <sprite>sprites\sprIconWoodenSword</sprite>
+        <sprite>sprites\sprIconTeleportOrb</sprite>
         <sprite>sprites\sprIconAwesomeSword</sprite>
         <sprite>sprites\sprIconGoldenSword</sprite>
         <sprite>sprites\sprIconLifePotion</sprite>
@@ -997,6 +1025,7 @@
       <sprite>sprites\sprAvatarBlueHairGuy</sprite>
       <sprite>sprites\sprAvatarBrownHairGal</sprite>
       <sprite>sprites\sprAvatarSnowScorpion</sprite>
+      <sprite>sprites\sprAvatarSquirrel</sprite>
       <sprite>sprites\sprAvatarDesertScorpion</sprite>
       <sprite>sprites\sprAvatarForestScorpion</sprite>
       <sprite>sprites\sprAvatarGanon</sprite>
@@ -1351,6 +1380,7 @@
       <script>scripts\SetSpritesGanonBeserk.gml</script>
       <script>scripts\SetSpritesGanonSpell.gml</script>
       <script>scripts\SetSpritesScorpion.gml</script>
+      <script>scripts\SetSpritesSquirrel.gml</script>
       <script>scripts\SetSpritesSnowScorpion.gml</script>
       <script>scripts\SetSpritesDesertScorpion.gml</script>
       <script>scripts\SetSpritesSnowMonster.gml</script>
@@ -1387,6 +1417,7 @@
     <scripts name="Items">
       <script>scripts\ItemGetDefine.gml</script>
       <script>scripts\ItemGetRubbishSword.gml</script>
+      <script>scripts\ItemGetTeleportOrb.gml</script>
       <script>scripts\ItemGetAwesomeSword.gml</script>
       <script>scripts\ItemGetGoldenSword.gml</script>
       <script>scripts\ItemGetLifePotion.gml</script>
@@ -1439,6 +1470,7 @@
           <script>scripts\EffectTakeCoins.gml</script>
           <script>scripts\EffectSpawnObject.gml</script>
           <script>scripts\EffectSpawnObjectContents.gml</script>
+          <script>scripts\EffectTeleport.gml</script>
         </scripts>
         <scripts name="Events">
           <script>scripts\EventLog.gml</script>
@@ -1449,6 +1481,9 @@
         <scripts name="Other">
           <script>scripts\NpcQuestMarker.gml</script>
         </scripts>
+      </scripts>
+      <scripts name="Questlines">
+        <script>scripts\QuestTeleportOrb.gml</script>
       </scripts>
     </scripts>
     <scripts name="Saving">
@@ -1504,6 +1539,7 @@
       </objects>
       <objects name="Enemies">
         <object>objects\objScorpion</object>
+        <object>objects\objSquirrel</object>
         <object>objects\objSnowScorpions</object>
         <object>objects\objDesertScorpion</object>
         <object>objects\objScorpionAnimate</object>
@@ -1517,6 +1553,7 @@
       </objects>
       <objects name="Bosses">
         <object>objects\objSkraggleKlaw</object>
+        <object>objects\sprSquirrelKing</object>
         <object>objects\objGanon</object>
       </objects>
     </objects>
@@ -1527,8 +1564,10 @@
       <object>objects\parObstacleFull</object>
       <object>objects\parObstacle</object>
       <object>objects\objWallSquare</object>
+      <object>objects\objSTEPSSquare</object>
       <object>objects\objWallAngle</object>
       <object>objects\objGrass</object>
+      <object>objects\object82</object>
       <object>objects\objGrassSnow</object>
       <object>objects\objCactus</object>
       <object>objects\objPot</object>
@@ -1597,7 +1636,6 @@
     <room>rooms\rmSplashGameMaker</room>
     <room>rooms\rmGanonCastle</room>
     <room>rooms\rmGanonRoom</room>
-    <room>rooms\rmLehigh</room>
     <rooms name="Title">
       <room>rooms\rmTitle</room>
       <room>rooms\rmSlotSelect</room>
@@ -1605,8 +1643,8 @@
       <room>rooms\rmOptions</room>
     </rooms>
     <room>rooms\rmStart</room>
-    <room>rooms\rmBattle</room>
     <room>rooms\rmSTEPS</room>
+    <room>rooms\rmBattle</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

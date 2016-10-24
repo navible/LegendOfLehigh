@@ -28,6 +28,7 @@
             <string>
 QuestManagerStart();
 
+QuestTeleportOrb();
 
 QuestUpdateStart();
 

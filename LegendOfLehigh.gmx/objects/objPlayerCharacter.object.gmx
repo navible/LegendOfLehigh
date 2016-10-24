@@ -187,6 +187,7 @@ _pressed = keyboard_check_pressed(KEY_ACTION) &amp;&amp; controlsAble;
 if (_pressed)
 &amp;&amp; (canMove)
     {
+    QuestUpdate();
     // Find item we are looking at depending on direction
     var foundInst;
     foundInst = GetInstanceFromFace(parInteract);
@@ -291,10 +292,7 @@ if (_enemy != noone)
     // If not already hit, take damage and stagger
     if (!beenHit)
         {
-        objPlayer.life--;
-        beenHit = true;
-        staggerTimer = 0.5*room_speed;
-        show_debug_message("Hit by enemy: "+string(object_get_name(_enemy.object_index)));
+        HitPlayer();
         }
     }
 

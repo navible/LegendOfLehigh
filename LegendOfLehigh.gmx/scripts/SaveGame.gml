@@ -23,11 +23,15 @@ ini_write_string("File", "Save", global.saveFile);
 
 // Save current room
 ini_write_string("Location", "Room", room_get_name(objGame.lastCheckpointRoom));
+ini_write_real("Location", "X", objPlayerCharacter.x);
+ini_write_real("Location", "Y", objPlayerCharacter.y);
 
 // Save stats.
 ini_write_real("Player", "Gems", objPlayer.coins);
 ini_write_real("Player", "Hearts", objPlayer.hearts);
 ini_write_real("Player", "Life", objPlayer.life);
+ini_write_real("Player", "Level", objPlayer.level);
+ini_write_real("Player", "XP", objPlayer.xp);
 ini_write_string("Player", "Character", global.character);
 
 // Save inventory
