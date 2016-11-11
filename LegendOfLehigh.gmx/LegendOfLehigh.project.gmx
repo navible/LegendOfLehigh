@@ -1479,6 +1479,7 @@
           <script>scripts\EffectSpawnObject.gml</script>
           <script>scripts\EffectSpawnObjectContents.gml</script>
           <script>scripts\EffectTeleport.gml</script>
+          <script>scripts\EffectSet.gml</script>
         </scripts>
         <scripts name="Events">
           <script>scripts\EventLog.gml</script>

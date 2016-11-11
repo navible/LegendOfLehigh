@@ -47,6 +47,9 @@ if (!instance_exists(objTransition))
     objPlayer.defense = 1 + ((objPlayer.level - 1) / 2); 
     global.character = ini_read_string("Player", "Character", "Boy");
     
+    // Progress
+    global.wonSTEPS = ini_read_real("Progress", "STEPS", false);
+    
     // Inventory
     var _tempList = ds_list_create();
     ds_list_read(_tempList, ini_read_string("Items", "Equipped", ""));

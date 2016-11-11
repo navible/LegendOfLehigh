@@ -34,6 +34,9 @@ ini_write_real("Player", "Level", objPlayer.level);
 ini_write_real("Player", "XP", objPlayer.xp);
 ini_write_string("Player", "Character", global.character);
 
+//Save progress.
+ini_write_real("Progress", "STEPS", global.wonSTEPS);
+
 // Save inventory
 with (objInventory)
     {

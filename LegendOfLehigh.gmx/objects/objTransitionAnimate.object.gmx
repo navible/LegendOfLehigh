@@ -108,6 +108,7 @@ if room == rmStart {
     instance_create(objPlayerCharacter.x, objPlayerCharacter.y, objAnimatedCharacter);
     with (objPlayerCharacter) instance_destroy();
     with (objDoorBlanker) instance_destroy();
+    with (objSquirrel) instance_destroy();
 }
 </string>
           </argument>

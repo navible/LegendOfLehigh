@@ -57,6 +57,8 @@ teleportX = -1;
 teleportY = -1;
 layerDeac = -1;
 wallType = objWallSquare;
+
+global.wonSTEPS = false;
 </string>
           </argument>
         </arguments>

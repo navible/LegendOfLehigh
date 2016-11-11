@@ -17,3 +17,4 @@ QuestDialogue("TELEPORT ORB DETECTED.");
 QuestDialogue("ACTIVATING TELEPORT SEQUENCE.");
 QuestCondition(CheckItemInventory, ItemGetTeleportOrb());
 QuestEffect(EffectTeleport, rmStart, 6, objSTEPSSquare);
+QuestEffect(EffectSet, 0);
