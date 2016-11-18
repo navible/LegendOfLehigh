@@ -1037,6 +1037,7 @@
       <sprite>sprites\sprAvatarDesertScorpion</sprite>
       <sprite>sprites\sprAvatarForestScorpion</sprite>
       <sprite>sprites\sprAvatarGanon</sprite>
+      <sprite>sprites\sprAvatarPacker</sprite>
     </sprites>
     <sprites name="Interface">
       <sprite>sprites\sprPanels</sprite>
@@ -1652,11 +1653,13 @@
       <room>rooms\rmLoadGame</room>
       <room>rooms\rmOptions</room>
       <room>rooms\room11</room>
+      <room>rooms\room12</room>
     </rooms>
     <room>rooms\rmStart</room>
     <room>rooms\rmSTEPS</room>
     <room>rooms\rmBattle</room>
     <room>rooms\rmChurch</room>
+    <room>rooms\rmChurchBoss</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
