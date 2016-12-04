@@ -13,7 +13,7 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>512</width>
-  <height>512</height>
-  <data>images\background35.png</data>
+  <width>1024</width>
+  <height>1024</height>
+  <data>images\background37.png</data>
 </background>

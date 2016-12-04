@@ -54,6 +54,7 @@ global.battleX = -1;
 global.battleY = -1;
 global.objInst = -1;
 
+global.wonSTEPS = false;
 </string>
           </argument>
         </arguments>

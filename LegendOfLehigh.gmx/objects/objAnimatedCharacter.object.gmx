@@ -492,7 +492,7 @@ if room == rmGanonRoom {
 if room == rmStart {
     z = 960 * (0.01 * zoom);
     w = 576 * (0.01 * zoom);
-    if z &gt; 960 &amp;&amp; z &lt;= 4096 {
+    if z &gt; 960 &amp;&amp; z &lt;= 2464 {
         view_wview[0] = z;
     }
     if w &gt; 576 &amp;&amp; w &lt;= 4096 {

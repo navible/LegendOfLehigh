@@ -1335,6 +1335,7 @@
       <background>background\tilesDungeon</background>
       <background>background\tilesModernBuilding</background>
       <background>background\tilesGrass</background>
+      <background>background\background37</background>
     </backgrounds>
     <background>background\tilesShopPack</background>
     <backgrounds name="Foliage Pack 1">
@@ -1346,6 +1347,8 @@
     <background>background\background32</background>
     <background>background\background33</background>
     <background>background\Church</background>
+    <background>background\background35</background>
+    <background>background\background36</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
