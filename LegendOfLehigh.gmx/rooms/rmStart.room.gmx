@@ -13,6 +13,7 @@
   <code>if global.wonSTEPS {
     tile_layer_delete(6);
     with (objSTEPSSquare) instance_destroy();
+    instance_create(1088, 3232, objFudTruck);
 }</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>

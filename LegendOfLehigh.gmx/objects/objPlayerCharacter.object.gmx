@@ -198,6 +198,7 @@ if (_pressed)
             case (objChest):
                 foundInst.image_speed = 0.1;
                 break;
+            case (objFudTruck):
             case (objSign):
                 ShowDialogue(foundInst);
                 break;
