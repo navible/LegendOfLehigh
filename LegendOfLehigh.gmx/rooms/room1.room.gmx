@@ -50,7 +50,10 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances/>
+  <instances>
+    <instance objName="objWallSquare" x="128" y="0" name="inst_0F3DA0BD" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="576" y="0" name="inst_C93FF11E" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
+  </instances>
   <tiles>
     <tile bgName="Church" x="0" y="0" w="32" h="32" xo="32" yo="320" id="10022634" name="inst_9EF691FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="Church" x="192" y="0" w="32" h="32" xo="32" yo="320" id="10022638" name="inst_1B2FEBA1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

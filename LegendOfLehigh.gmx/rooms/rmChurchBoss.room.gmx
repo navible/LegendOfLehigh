@@ -52,6 +52,22 @@
   </views>
   <instances>
     <instance objName="objForestMonster" x="512" y="544" name="inst_27824A91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="0" y="192" name="inst_F6F76BE8" locked="0" code="" scaleX="32" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="960" y="288" name="inst_2CAB03AB" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="960" y="544" name="inst_4375A528" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="0" y="544" name="inst_49E8658D" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="0" y="288" name="inst_167C6199" locked="0" code="" scaleX="2" scaleY="6" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="160" y="480" name="inst_2C91E3BE" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="160" y="544" name="inst_B1F0C236" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="160" y="608" name="inst_A7EC1ACC" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="640" y="480" name="inst_4E69CAC6" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="640" y="544" name="inst_ACA7FF99" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="640" y="608" name="inst_61757860" locked="0" code="" scaleX="6" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="864" y="320" name="inst_1370D1EB" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="128" y="320" name="inst_CF9302D3" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="448" y="288" name="inst_664DAE6D" locked="0" code="" scaleX="3" scaleY="-2" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="544" y="256" name="inst_97A45C54" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="416" y="256" name="inst_E3C73C9F" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="0" y="736" w="32" h="32" xo="288" yo="96" id="10021580" name="inst_220757B0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
