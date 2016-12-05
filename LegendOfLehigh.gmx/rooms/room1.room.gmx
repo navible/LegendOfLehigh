@@ -55,8 +55,6 @@
     <instance objName="objWallSquare" x="576" y="0" name="inst_C93FF11E" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="objBlank" x="352" y="256" name="instUCExit" locked="0" code="targetRoom = rmStart;&#xA;targetDoor = instUCEnter;" scaleX="1.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBlanker" x="352" y="0" name="instUC5Down" locked="0" code="targetRoom = room5;&#xA;targetDoor = instUC1Up;" scaleX="0.75" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDoorLeft" x="0" y="96" name="instUC2Right" locked="0" code="targetRoom = room2;&#xA;targetDoor = instUC1Left;" scaleX="0.25" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="objDoorRight" x="768" y="96" name="instUC3Left" locked="0" code="targetRoom = room3;&#xA;targetDoor = instUC1Right;" scaleX="0.25" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="0" y="0" w="32" h="32" xo="32" yo="320" id="10022634" name="inst_9EF691FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

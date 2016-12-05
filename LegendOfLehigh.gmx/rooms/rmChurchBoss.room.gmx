@@ -68,7 +68,6 @@
     <instance objName="objWallSquare" x="544" y="256" name="inst_97A45C54" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="416" y="256" name="inst_E3C73C9F" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objBlank" x="192" y="736" name="instChurchBossEnter" locked="0" code="targetRoom = rmChurch;&#xA;targetDoor = instChurchBossExit;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestKing" x="493" y="556" name="inst_D6D17DEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objChest" x="480" y="256" name="inst_17CBCAEA" locked="0" code="containsItem = true;&#xA;item = ItemGetPurpleOrb;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

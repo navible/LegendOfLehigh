@@ -57,7 +57,6 @@
     <instance objName="objLifeHeart" x="32" y="256" name="inst_FC7C9339" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLifeHeart" x="384" y="32" name="inst_373A3173" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLifeHeart" x="384" y="256" name="inst_A17D5823" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDoorRight" x="384" y="96" name="instUC5Left" locked="0" code="targetRoom = room5;&#xA;targetDoor = instUC7Right;" scaleX="0.25" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBlanker" x="160" y="0" name="instUCBossExit" locked="0" code="targetRoom = roomFinalBoss;&#xA;targetDoor = instUCBossEnter;" scaleX="0.75" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

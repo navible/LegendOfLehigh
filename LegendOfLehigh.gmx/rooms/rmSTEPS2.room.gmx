@@ -53,15 +53,16 @@
   <instances>
     <instance objName="objSquirrel" x="928" y="448" name="inst_5B69DA2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="896" y="544" name="inst_7E0A5ECD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMonsterAnimate" x="192" y="288" name="inst_09C12000" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMonsterAnimate" x="256" y="352" name="inst_F2191CEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objMonsterAnimate" x="320" y="288" name="inst_2792114E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objChest" x="224" y="192" name="inst_0EA9835B" locked="0" code="containsItem = true;&#xA;item = ItemGetTeleportOrb();&#xA;" scaleX="2" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="608" y="384" name="inst_62812C6B" locked="0" code="" scaleX="1.5151515007019" scaleY="1.15151512622833" colour="4294967295" rotation="0"/>
     <instance objName="objChest" x="576" y="256" name="inst_B96832FC" locked="0" code="containsItem = true;&#xA;item = ItemGetAwesomeSword();&#xA;" scaleX="2" scaleY="1.33333337306976" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerCharacter" x="1184" y="512" name="inst_55984413" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="2"/>
+    <instance objName="parDoor" x="1248" y="448" name="inst_AB58395F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDialogueBox" x="64" y="384" name="inst_30E76915" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;POWER EXHAUSTED.&quot;);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDoorRight" x="1248" y="416" name="instSTEPSExit" locked="0" code="targetRoom = rmStart;&#xA;targetDoor = instSTEPSEnter;&#xA;" scaleX="0.25" scaleY="4" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="192" y="320" name="inst_A9163ED6" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="320" y="320" name="inst_5075061D" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="256" y="388" name="inst_F821453D" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoorBlanker" x="1248" y="544" name="inst_D75F26E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
   </instances>
   <tiles>
     <tile bgName="tilesTreePack1_Forest" x="640" y="192" w="32" h="32" xo="704" yo="352" id="10026780" name="inst_F46BC013" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
