@@ -11,7 +11,7 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>0</enableViews>
+  <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="960" hview="576" xport="0" yport="0" wport="960" hport="576" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -51,7 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="objChest" x="128" y="64" name="inst_B8D43FC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="64" name="inst_242F92C1" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="32" y="128" name="inst_6B795A68" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="96" y="64" name="inst_7EBDC59E" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
@@ -70,7 +69,7 @@
     <instance objName="objWallSquare" x="320" y="32" name="inst_DA8DDC4C" locked="0" code="" scaleX="1" scaleY="6" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="608" y="0" name="inst_F9B74485" locked="0" code="" scaleX="2" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="736" y="0" name="inst_D5E9E8E9" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
-    <instance objName="objChest" x="608" y="576" name="inst_9F1FF91D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objChest" x="608" y="576" name="inst_9F1FF91D" locked="0" code="containsItem = true;&#xA;canDropOnGround = true;&#xA;item[ITEM_OBJECT]=objBlueGem;&#xA;item[ITEM_COUNT]=5;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="640" y="416" name="inst_38543C83" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="544" y="608" name="inst_31ADC35A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="896" y="64" name="inst_93A9A1D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -84,6 +83,9 @@
     <instance objName="objForestMonster" x="160" y="192" name="inst_A253ACE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objForestMonster" x="64" y="96" name="inst_8ADFFF6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="544" y="160" name="inst_683092EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBlank" x="32" y="736" name="instChurchExit" locked="0" code="targetRoom = rmStart;&#xA;targetDoor = instChurchEnter;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoorBlanker" x="672" y="64" name="instChurchBossExit" locked="0" code="targetRoom = rmChurchBoss;&#xA;targetDoor = instChurchBossEnter;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objChest" x="128" y="64" name="inst_E5346032" locked="0" code="containsItem = true;&#xA;item = ItemGetGoldenSword();" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="64" y="704" w="32" h="32" xo="320" yo="64" id="10020219" name="inst_C52E5787" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -903,20 +905,20 @@
     <tile bgName="bckChurchElements" x="672" y="448" w="32" h="32" xo="224" yo="32" id="10021577" name="inst_9FA03DAF" depth="900001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bckChurchElements" x="640" y="416" w="32" h="32" xo="192" yo="0" id="10021578" name="inst_E80D8F58" depth="900001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="bckChurchElements" x="672" y="416" w="32" h="32" xo="224" yo="0" id="10021579" name="inst_2DB5EB65" depth="900001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="640" y="64" w="32" h="32" xo="672" yo="416" id="10021229" name="inst_3FABC7A1" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="640" y="32" w="32" h="32" xo="672" yo="384" id="10021230" name="inst_C79A3BCF" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="704" y="-64" w="32" h="32" xo="640" yo="288" id="10021238" name="inst_880A26C6" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="640" y="-32" w="32" h="32" xo="672" yo="320" id="10021240" name="inst_3D2B550D" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="640" y="-64" w="32" h="32" xo="672" yo="256" id="10021241" name="inst_0D9F4B34" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="736" y="-32" w="32" h="32" xo="672" yo="320" id="10021242" name="inst_54D7AFCC" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="736" y="32" w="32" h="32" xo="672" yo="384" id="10021244" name="inst_59A7699D" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="736" y="64" w="32" h="32" xo="672" yo="416" id="10021245" name="inst_F85F4DCC" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="704" y="-32" w="32" h="32" xo="736" yo="288" id="10021247" name="inst_794022CD" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="672" y="-64" w="32" h="32" xo="672" yo="256" id="10021250" name="inst_73F9E328" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="736" y="-64" w="32" h="32" xo="672" yo="256" id="10021252" name="inst_1C9926FE" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="736" y="0" w="32" h="32" xo="672" yo="352" id="10021253" name="inst_1B51C16F" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="640" y="0" w="32" h="32" xo="672" yo="352" id="10021254" name="inst_698386B5" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="Church" x="672" y="-32" w="32" h="32" xo="704" yo="288" id="10021256" name="inst_A9998491" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="640" y="110" w="32" h="32" xo="672" yo="416" id="10021229" name="inst_3FABC7A1" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="640" y="78" w="32" h="32" xo="672" yo="384" id="10021230" name="inst_C79A3BCF" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="704" y="-18" w="32" h="32" xo="640" yo="288" id="10021238" name="inst_880A26C6" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="640" y="14" w="32" h="32" xo="672" yo="320" id="10021240" name="inst_3D2B550D" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="640" y="-18" w="32" h="32" xo="672" yo="256" id="10021241" name="inst_0D9F4B34" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="736" y="14" w="32" h="32" xo="672" yo="320" id="10021242" name="inst_54D7AFCC" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="736" y="78" w="32" h="32" xo="672" yo="384" id="10021244" name="inst_59A7699D" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="736" y="110" w="32" h="32" xo="672" yo="416" id="10021245" name="inst_F85F4DCC" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="704" y="14" w="32" h="32" xo="736" yo="288" id="10021247" name="inst_794022CD" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="672" y="-18" w="32" h="32" xo="672" yo="256" id="10021250" name="inst_73F9E328" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="736" y="-18" w="32" h="32" xo="672" yo="256" id="10021252" name="inst_1C9926FE" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="736" y="46" w="32" h="32" xo="672" yo="352" id="10021253" name="inst_1B51C16F" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="640" y="46" w="32" h="32" xo="672" yo="352" id="10021254" name="inst_698386B5" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="Church" x="672" y="14" w="32" h="32" xo="704" yo="288" id="10021256" name="inst_A9998491" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="Church" x="0" y="64" w="32" h="32" xo="768" yo="320" id="10021257" name="inst_0BA236B4" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="Church" x="0" y="96" w="32" h="32" xo="768" yo="352" id="10021258" name="inst_4558FD0B" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="Church" x="0" y="128" w="32" h="32" xo="768" yo="384" id="10021259" name="inst_6A9BCE2B" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

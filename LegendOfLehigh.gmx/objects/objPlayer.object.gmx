@@ -227,10 +227,12 @@ if (!instance_exists(objPlayerCharacter))
 if (global.spawnDoor != -1)
     {
     // Get x position for the center of the door
-    var sprite, offset, xoff;
+    var sprite, offset, xoff, yoff, yoffset;
     sprite = global.spawnDoor.sprite_index;
     xoff = sprite_get_xoffset(sprite);
     offset = (sprite_get_width(sprite)-xoff) / 2;
+    yoff = sprite_get_yoffset(sprite);
+    yoffset = (sprite_get_height(sprite)-yoff) / 2;
     
     // A blank door implies we are coming in from the south
     if (global.spawnDoor.object_index == objBlank)
@@ -242,13 +244,25 @@ if (global.spawnDoor != -1)
     // Otherwise, we are coming in from the north
     else
         {
-        objPlayerCharacter.x = global.spawnDoor.x+offset;
-        objPlayerCharacter.y = global.spawnDoor.y+64;
-        objPlayerCharacter.face = SOUTH;
+        if (global.spawnDoor.object_index == objDoorLeft) {
+            objPlayerCharacter.x = global.spawnDoor.x+64;
+            objPlayerCharacter.y = global.spawnDoor.y+yoffset;
         }
+        else {
+            if (global.spawnDoor.object_index == objDoorRight) {
+                objPlayerCharacter.x = global.spawnDoor.x-4;
+                objPlayerCharacter.y = global.spawnDoor.y+yoffset;
+            }
+            else {
+                objPlayerCharacter.x = global.spawnDoor.x+offset;
+                objPlayerCharacter.y = global.spawnDoor.y+64;
+                objPlayerCharacter.face = SOUTH;
+            }
+        }
+    }
     // Disable player input until they press something again
     objPlayerCharacter.controlsAble = false;
-    }
+}
 
 
 // Activate all "hidden" objects

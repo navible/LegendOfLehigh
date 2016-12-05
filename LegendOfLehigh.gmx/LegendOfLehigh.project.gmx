@@ -1017,6 +1017,9 @@
       <sprites name="Icons">
         <sprite>sprites\sprIconWoodenSword</sprite>
         <sprite>sprites\sprIconTeleportOrb</sprite>
+        <sprite>sprites\sprIconRedOrb</sprite>
+        <sprite>sprites\sprIconPurpleOrb</sprite>
+        <sprite>sprites\sprIconBlackOrb</sprite>
         <sprite>sprites\sprIconAwesomeSword</sprite>
         <sprite>sprites\sprIconGoldenSword</sprite>
         <sprite>sprites\sprIconLifePotion</sprite>
@@ -1432,6 +1435,9 @@
       <script>scripts\ItemGetDefine.gml</script>
       <script>scripts\ItemGetRubbishSword.gml</script>
       <script>scripts\ItemGetTeleportOrb.gml</script>
+      <script>scripts\ItemGetPurpleOrb.gml</script>
+      <script>scripts\ItemGetRedOrb.gml</script>
+      <script>scripts\ItemGetBlackOrb.gml</script>
       <script>scripts\ItemGetAwesomeSword.gml</script>
       <script>scripts\ItemGetGoldenSword.gml</script>
       <script>scripts\ItemGetLifePotion.gml</script>
@@ -1554,6 +1560,7 @@
       </objects>
       <objects name="Enemies">
         <object>objects\objScorpion</object>
+        <object>objects\objGhost</object>
         <object>objects\objSquirrel</object>
         <object>objects\objSnowScorpions</object>
         <object>objects\objDesertScorpion</object>
@@ -1569,6 +1576,8 @@
       <objects name="Bosses">
         <object>objects\objSkraggleKlaw</object>
         <object>objects\objSquirrelKing</object>
+        <object>objects\objForestKing</object>
+        <object>objects\objGhostKing</object>
         <object>objects\objGanon</object>
       </objects>
     </objects>
@@ -1613,6 +1622,8 @@
       <object>objects\objCaveEntranceDesert</object>
       <object>objects\objDoorHouse</object>
       <object>objects\objDoorBlanker</object>
+      <object>objects\objDoorLeft</object>
+      <object>objects\objDoorRight</object>
       <object>objects\objBlank</object>
     </objects>
     <objects name="Decoration">
@@ -1657,14 +1668,13 @@
       <room>rooms\rmSlotSelect</room>
       <room>rooms\rmLoadGame</room>
       <room>rooms\rmOptions</room>
-      <room>rooms\room11</room>
-      <room>rooms\room12</room>
     </rooms>
     <room>rooms\rmStart</room>
-    <room>rooms\rmSTEPS</room>
     <room>rooms\rmBattle</room>
+    <room>rooms\rmSTEPS</room>
     <room>rooms\rmChurch</room>
     <room>rooms\rmChurchBoss</room>
+    <room>rooms\rmLibrary</room>
     <rooms name="UC">
       <room>rooms\room1</room>
       <room>rooms\room2</room>
