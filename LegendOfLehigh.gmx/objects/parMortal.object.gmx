@@ -91,14 +91,25 @@ if (hide)
         }
     
     // Randomly spawn a gem drop
-    if (irandom(8) == 0)
+    if (irandom(3) == 0)
         instance_create(x+16, y+16, objGreenGem);
+    if (irandom(5) == 0)
+        instance_create(x+16, y+16, objBlueGem);
+    if (irandom(8) == 0)
+        instance_create(x+16, y+16, objPurpleGem);
+
+    if (irandom(3) == 0)
+        instance_create(x+16, y+16, objLifeHeart);
     
     var xp = 0;
     switch (object_index) {
         case (objSquirrel): xp = 1; break;
         case (objForestMonster): xp = 3; break;
-        case (objSquirrelKing): xp = 10; break;
+        case (objGhost): xp = 5; break;
+        case (objScorpion): xp = 10; break;
+        case (objSquirrelKing): xp = 20; break;
+        case (objForestKing): xp = 40; break;
+        case (objGhostKing): xp = 50; break;
     }
     objPlayer.xp += xp;
     
