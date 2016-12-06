@@ -246,12 +246,12 @@ if (global.spawnDoor != -1)
         {
         if (global.spawnDoor.object_index == objDoorLeft) {
             objPlayerCharacter.x = global.spawnDoor.x+64;
-            objPlayerCharacter.y = global.spawnDoor.y+yoffset;
+            objPlayerCharacter.y = global.spawnDoor.y+yoffset+32;
         }
         else {
             if (global.spawnDoor.object_index == objDoorRight) {
-                objPlayerCharacter.x = global.spawnDoor.x-4;
-                objPlayerCharacter.y = global.spawnDoor.y+yoffset;
+                objPlayerCharacter.x = global.spawnDoor.x-20;
+                objPlayerCharacter.y = global.spawnDoor.y+yoffset+32;
             }
             else {
                 objPlayerCharacter.x = global.spawnDoor.x+offset;
