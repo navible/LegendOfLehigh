@@ -675,14 +675,16 @@ instance_create(864, 512, global.objType);</code>
     <tile bgName="tilesDungeon" x="160" y="320" w="64" h="32" xo="96" yo="96" id="10028027" name="inst_AA19B93E" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesDungeon" x="672" y="480" w="64" h="32" xo="96" yo="96" id="10028028" name="inst_B44B3D1F" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesDungeon" x="800" y="256" w="64" h="32" xo="96" yo="96" id="10028029" name="inst_36440C8A" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tilesDungeon" x="96" y="320" w="32" h="32" xo="96" yo="64" id="10028038" name="inst_2B1D0655" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tilesDungeon" x="800" y="64" w="32" h="32" xo="96" yo="64" id="10028039" name="inst_9A73FEAC" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tilesDungeon" x="864" y="416" w="32" h="32" xo="96" yo="64" id="10028040" name="inst_19B62ACF" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tilesDungeon" x="64" y="448" w="32" h="32" xo="96" yo="64" id="10028041" name="inst_02120A7A" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tilesDungeon" x="160" y="64" w="32" h="32" xo="96" yo="64" id="10028042" name="inst_1118D21C" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tilesDungeon" x="416" y="480" w="32" h="32" xo="96" yo="64" id="10028043" name="inst_3E0C455D" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesTreePack1_Forest" x="192" y="352" w="96" h="192" xo="96" yo="128" id="10028030" name="inst_ABD6C2AD" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesTreePack1_Forest" x="96" y="96" w="96" h="192" xo="96" yo="128" id="10028031" name="inst_E6A90D6D" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesTreePack1_Forest" x="800" y="64" w="96" h="192" xo="96" yo="128" id="10028032" name="inst_407D5388" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesTreePack1_Forest" x="736" y="288" w="96" h="192" xo="96" yo="128" id="10028033" name="inst_27F86576" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tilesDungeon" x="64" y="384" w="32" h="32" xo="96" yo="64" id="10028034" name="inst_D445B4E3" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tilesDungeon" x="864" y="448" w="32" h="32" xo="96" yo="64" id="10028035" name="inst_A6538900" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tilesDungeon" x="768" y="32" w="32" h="32" xo="96" yo="64" id="10028036" name="inst_9E736024" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tilesDungeon" x="64" y="128" w="32" h="32" xo="96" yo="64" id="10028037" name="inst_85481841" depth="-900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
