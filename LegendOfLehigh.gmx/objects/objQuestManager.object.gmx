@@ -29,6 +29,10 @@
 QuestManagerStart();
 
 QuestTeleportOrb();
+QuestGreenOrb();
+QuestPurpleOrb();
+QuestRedOrb();
+QuestBlackOrb();
 
 QuestUpdateStart();
 

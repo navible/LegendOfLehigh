@@ -1511,6 +1511,10 @@
       </scripts>
       <scripts name="Questlines">
         <script>scripts\QuestTeleportOrb.gml</script>
+        <script>scripts\QuestGreenOrb.gml</script>
+        <script>scripts\QuestPurpleOrb.gml</script>
+        <script>scripts\QuestRedOrb.gml</script>
+        <script>scripts\QuestBlackOrb.gml</script>
       </scripts>
     </scripts>
     <scripts name="Saving">

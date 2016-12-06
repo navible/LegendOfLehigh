@@ -96,6 +96,18 @@
     <instance objName="objWallSquare" x="64" y="256" name="inst_3E41C684" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="96" y="256" name="inst_704361D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="128" y="256" name="inst_295924CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="64" y="32" name="inst_7D46B2B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="64" y="64" name="inst_4F919D57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="320" y="32" name="inst_6BB24F30" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="320" y="64" name="inst_47E80DC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="320" y="192" name="inst_2F8732A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="320" y="224" name="inst_24C11FEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="64" y="192" name="inst_D7500639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objWallSquare" x="64" y="224" name="inst_3596ADE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSign" x="64" y="192" name="instPurpleOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="320" y="64" name="instBlackOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="320" y="192" name="instRedOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="64" y="64" name="instGreenOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="0" y="0" w="32" h="32" xo="32" yo="320" id="10022634" name="inst_9EF691FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

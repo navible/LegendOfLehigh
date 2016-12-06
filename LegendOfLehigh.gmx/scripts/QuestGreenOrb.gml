@@ -1,0 +1,18 @@
+QuestNew("Green Orb", "Green Orb");
+QuestGiver(instGreenOrbPillar);
+QuestDialogueContext(Context.intro);
+QuestDialogueBegin(0);
+QuestDialogue("<it looks like that teleport orb should go here>");
+QuestDialogueAccept(1, 2, "I have it!", "But I like this orb...");
+QuestDialogueBegin(1);
+QuestDialogue("*you feel the ground shake beneath your feet*");
+QuestDialogueBegin(2);
+QuestDialogue("*you walk away.*");
+QuestDialogueContext(Context.progress);
+QuestDialogueBegin(0);
+QuestDialogue("this text should never be reached.");
+QuestDialogueContext(Context.ending);
+QuestDialogueBegin(0);
+QuestDialogue("*you feel the ground shake beneath your feet.*");
+QuestCondition(CheckItemInventory, ItemGetTeleportOrb());
+QuestEffect(EffectSet, 1);

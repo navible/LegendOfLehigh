@@ -1,0 +1,18 @@
+QuestNew("Purple Orb", "Purple Orb");
+QuestGiver(instPurpleOrbPillar);
+QuestDialogueContext(Context.intro);
+QuestDialogueBegin(0);
+QuestDialogue("<it looks like an orb should go here>");
+QuestDialogueAccept(1, 2, "Guess I gotta find another orb.", "Not again!");
+QuestDialogueBegin(1);
+QuestDialogue("<you get the feeling this one should be purple>");
+QuestDialogueBegin(2);
+QuestDialogue("*you walk away.*");
+QuestDialogueContext(Context.progress);
+QuestDialogueBegin(0);
+QuestDialogue("<you get the feeling this one should be purple>");
+QuestDialogueContext(Context.ending);
+QuestDialogueBegin(0);
+QuestDialogue("*you feel the ground shake beneath your feet.*");
+QuestCondition(CheckItemInventory, ItemGetPurpleOrb());
+QuestEffect(EffectSet, 2);
