@@ -619,6 +619,8 @@
       <sound>sound\sndOverworldTheme</sound>
       <sound>sound\sndSTEPS</sound>
       <sound>sound\sndTitleTheme</sound>
+      <sound>sound\sndLibrary</sound>
+      <sound>sound\sndChurch</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

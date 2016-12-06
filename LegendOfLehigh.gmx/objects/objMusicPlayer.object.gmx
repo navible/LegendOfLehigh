@@ -70,6 +70,10 @@ switch (room)
     case (rmTitle): currentTrack = sndTitleTheme; break;
     case (rmStart): currentTrack = sndOverworldTheme; break;
     case (rmSTEPS): currentTrack = sndSTEPS; break;
+    case (rmLibrary): currentTrack = sndLibrary; break;
+    case (rmChurch): currentTrack = sndChurch; break;
+    case (room1): currentTrack = sndGanonCastle; break;
+    case (roomFinalBoss): currentTrack = sndGanonRoom; break;
     }
 
 
