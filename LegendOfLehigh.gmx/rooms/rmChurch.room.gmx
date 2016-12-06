@@ -73,15 +73,15 @@
     <instance objName="objWallSquare" x="640" y="416" name="inst_38543C83" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="544" y="608" name="inst_31ADC35A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="896" y="64" name="inst_93A9A1D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSquirrel" x="960" y="384" name="inst_C02CA523" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSquirrel" x="960" y="384" name="inst_C02CA523" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="736" y="352" name="inst_8CCDACBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSquirrel" x="288" y="352" name="inst_68BFBBA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSquirrel" x="64" y="448" name="inst_339F5784" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSquirrel" x="416" y="736" name="inst_7963F134" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSquirrel" x="288" y="352" name="inst_68BFBBA1" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSquirrel" x="64" y="448" name="inst_339F5784" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSquirrel" x="416" y="736" name="inst_7963F134" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="928" y="736" name="inst_56BDB637" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="256" y="192" name="inst_7DB6EC67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="160" y="192" name="inst_A253ACE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="64" y="96" name="inst_8ADFFF6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestMonster" x="256" y="192" name="inst_7DB6EC67" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestMonster" x="160" y="192" name="inst_A253ACE0" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestMonster" x="64" y="96" name="inst_8ADFFF6B" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSquirrel" x="544" y="160" name="inst_683092EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBlank" x="32" y="736" name="instChurchExit" locked="0" code="targetRoom = rmStart;&#xA;targetDoor = instChurchEnter;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBlanker" x="672" y="64" name="instChurchBossExit" locked="0" code="targetRoom = rmChurchBoss;&#xA;targetDoor = instChurchBossEnter;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
