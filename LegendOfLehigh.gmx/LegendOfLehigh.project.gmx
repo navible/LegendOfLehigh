@@ -1582,6 +1582,7 @@
       <objects name="Bosses">
         <object>objects\objSkraggleKlaw</object>
         <object>objects\objGanon</object>
+        <object>objects\objGanonBattle</object>
         <object>objects\objForestKing</object>
         <object>objects\objGhostKing</object>
         <object>objects\objSquirrelKing</object>
