@@ -36,8 +36,8 @@ image_yscale = 1.0;
 
 
 // Basic stats for the mob
-life = 2;
-mySpeed = 2;        // How fast this mob moves in pixels-per-step
+life = 5;
+mySpeed = 4;        // How fast this mob moves in pixels-per-step
 docile = false;     // Whether this mob is docile (non-agressive)
 
 

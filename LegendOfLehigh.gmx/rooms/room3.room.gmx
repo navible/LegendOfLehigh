@@ -58,8 +58,6 @@ else {
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="objForestMonster" x="256" y="160" name="inst_9969BE8D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestMonster" x="160" y="224" name="inst_8D421475" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoorBlanker" x="160" y="0" name="instUC4Down" locked="0" code="targetRoom = room4;&#xA;targetDoor = instUC3Up;" scaleX="0.75" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerCharacter" x="96" y="96" name="inst_B486CEB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDoorLeft" x="0" y="96" name="instUC1Right" locked="0" code="targetRoom = room1;&#xA;targetDoor = instUC3Left;&#xA;" scaleX="0.25" scaleY="3" colour="4294967295" rotation="0"/>
@@ -103,6 +101,9 @@ else {
     <instance objName="objOrbSquare" x="256" y="32" name="inst_8F36E5FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOrbSquare" x="288" y="32" name="inst_CE83F84D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objOrbSquare" x="320" y="32" name="inst_24721092" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestMonster" x="96" y="192" name="inst_22FCF696" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestMonster" x="224" y="160" name="inst_A06CC19E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestMonster" x="320" y="224" name="inst_38739194" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="0" y="0" w="32" h="32" xo="32" yo="320" id="10022634" name="inst_9EF691FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

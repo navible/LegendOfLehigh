@@ -897,6 +897,33 @@
           </sprites>
           <sprite>sprites\sprSquirrelDeathBones</sprite>
         </sprites>
+        <sprites name="Ghost">
+          <sprites name="Walk">
+            <sprite>sprites\sprGhostWalkEast</sprite>
+            <sprite>sprites\sprGhostWalkWest</sprite>
+            <sprite>sprites\sprGhostWalkNorth</sprite>
+            <sprite>sprites\sprGhostWalkSouth</sprite>
+          </sprites>
+          <sprites name="Idle">
+            <sprite>sprites\sprGhostIdleEast</sprite>
+            <sprite>sprites\sprGhostIdleWest</sprite>
+            <sprite>sprites\sprGhostIdleNorth</sprite>
+            <sprite>sprites\sprGhostIdleSouth</sprite>
+          </sprites>
+          <sprites name="Attack">
+            <sprite>sprites\sprGhostAttackEast</sprite>
+            <sprite>sprites\sprGhostAttackWest</sprite>
+            <sprite>sprites\sprGhostAttackNorth</sprite>
+            <sprite>sprites\sprGhostAttackSouth</sprite>
+          </sprites>
+          <sprites name="Stagger">
+            <sprite>sprites\sprGhostStaggerEast</sprite>
+            <sprite>sprites\sprGhostStaggerWest</sprite>
+            <sprite>sprites\sprGhostStaggerNorth</sprite>
+            <sprite>sprites\sprGhostStaggerSouth</sprite>
+          </sprites>
+          <sprite>sprites\sprGhostDeathBones</sprite>
+        </sprites>
       </sprites>
       <sprites name="NPCSprites">
         <sprites name="Male">
@@ -1037,6 +1064,7 @@
       <sprite>sprites\sprAvatarBrownHairGal</sprite>
       <sprite>sprites\sprAvatarSnowScorpion</sprite>
       <sprite>sprites\sprAvatarSquirrel</sprite>
+      <sprite>sprites\sprAvatarGhost</sprite>
       <sprite>sprites\sprAvatarDesertScorpion</sprite>
       <sprite>sprites\sprAvatarForestScorpion</sprite>
       <sprite>sprites\sprAvatarGanon</sprite>
@@ -1404,6 +1432,7 @@
       <script>scripts\SetSpritesGanonSpell.gml</script>
       <script>scripts\SetSpritesScorpion.gml</script>
       <script>scripts\SetSpritesSquirrel.gml</script>
+      <script>scripts\SetSpritesGhost.gml</script>
       <script>scripts\SetSpritesSnowScorpion.gml</script>
       <script>scripts\SetSpritesDesertScorpion.gml</script>
       <script>scripts\SetSpritesSnowMonster.gml</script>
