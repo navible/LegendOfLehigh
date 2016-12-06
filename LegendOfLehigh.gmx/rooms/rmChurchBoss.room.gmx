@@ -70,7 +70,7 @@
     <instance objName="objBlank" x="192" y="736" name="instChurchBossEnter" locked="0" code="targetRoom = rmChurch;&#xA;targetDoor = instChurchBossExit;" scaleX="0.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objChest" x="480" y="256" name="inst_17CBCAEA" locked="0" code="containsItem = true;&#xA;item = ItemGetPurpleOrb();&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlayerCharacter" x="256" y="736" name="inst_84451567" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForestKing" x="496" y="558" name="inst_18A88122" locked="0" code="stay = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForestKing" x="496" y="558" name="inst_18A88122" locked="0" code="stay = true;&#xA;permadeath = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="224" name="inst_E7536D7B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="256" name="inst_66DD1967" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="480" name="inst_20194BBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

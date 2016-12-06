@@ -161,15 +161,38 @@ PlaySound(snd_BushCut);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!other.stay) {
-    if room != rmBattle {
-        global.objType = other.object_index;
-        global.objInst = other.id;
-        global.prevRoom = room;
-        global.battleX = x;
-        global.battleY = y;
-        room_persistent = true;
-        room_goto(rmBattle);
+            <string>if other.object_index == objGanonBattle &amp;&amp; other.dead == true {
+    other.dead = false;
+    with (instance_create(x, y, objDialogueBox)) {
+        DialogueBegin(0);
+        Dialogue("NO!!!!!!!");
+        avatarSprite = sprAvatarGanon;
+        dead = true;
+    }
+}
+if other.object_index != objGanonBattle {
+    if (!other.stay) {
+        if room != rmBattle {
+            global.objType = other.object_index;
+            global.objInst = other.id;
+            global.prevRoom = room;
+            global.battleX = x;
+            global.battleY = y;
+            room_persistent = true;
+            room_goto(rmBattle);
+        }
+        else {
+            with (other) {
+                if (!beenHit) {
+                    myLife -= objPlayer.attack+objPlayer.equippedWeapon[ITEM_EFFECT]+other.bonusDamage-1;
+                    state = STATE_STAGGER;
+                    staggerTimer = 30;
+                    face = GetOppositeDirection(objPlayerCharacter.face);
+                    beenHit = true;
+                    PlaySound(snd_GetHit);
+                }
+            }
+        }
     }
     else {
         with (other) {
@@ -181,18 +204,6 @@ PlaySound(snd_BushCut);
                 beenHit = true;
                 PlaySound(snd_GetHit);
             }
-        }
-    }
-}
-else {
-    with (other) {
-        if (!beenHit) {
-            myLife -= objPlayer.attack+objPlayer.equippedWeapon[ITEM_EFFECT]+other.bonusDamage-1;
-            state = STATE_STAGGER;
-            staggerTimer = 30;
-            face = GetOppositeDirection(objPlayerCharacter.face);
-            beenHit = true;
-            PlaySound(snd_GetHit);
         }
     }
 }

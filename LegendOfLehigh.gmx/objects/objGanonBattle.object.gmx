@@ -5,8 +5,8 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>parEnemyAnimate</parentName>
-  <maskName>sprSkraggleMask</maskName>
+  <parentName>parEnemy</parentName>
+  <maskName>sprSnowMonsterMask</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -28,6 +28,7 @@
             <string>
 event_inherited();
 
+count = 2700;
 hide = false;
 wait = false;            // Used to flag wether NPC is in dialogue, and should wait
 
@@ -68,6 +69,8 @@ staggerTimer = -1;
 beenHit = false;
 image_speed = 0;
 
+dead = false;
+
 </string>
           </argument>
         </arguments>
@@ -90,7 +93,140 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if dead == true {
+    count++;
+    switch (count) {
+        case 2702:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 2766:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 2830:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 2894:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 2958:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3018:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3074:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3112:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3128:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3144:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3152:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3160:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3164:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3168:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3170:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3172:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3174:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3176:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3177:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3178:
+            with (objGanonBattle) {
+                SetSpritesGanonNormal();
+                image_index = 2;
+            }
+            break;
+        case 3179:
+            with (objGanonBattle) {
+                SetSpritesGanonSpell();
+                image_index = 2;
+            }
+            break;
+        case 3180:
+            with (objPlayer) life = 0;
+            break;
+    }
+}
 // If the game is paused, interrupt everything
 if (objGame.isPaused)
     {

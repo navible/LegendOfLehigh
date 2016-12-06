@@ -203,8 +203,9 @@
     <instance objName="objWallSquare" x="448" y="288" name="inst_9A6C547D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="448" y="320" name="inst_4F1912E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="416" y="320" name="inst_89256D81" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSquirrelKing" x="608" y="416" name="inst_43E303E8" locked="0" code="stay = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSquirrelKing" x="608" y="416" name="inst_43E303E8" locked="0" code="stay = true;&#xA;permadeath = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSign" x="64" y="416" name="instTeleportConsole" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;POWER EXHAUSTED.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objDialogueBox" x="352" y="448" name="inst_B3B3F549" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Hello&quot;);&#xA;Dialogue(&quot;It's me&quot;);&#xA;Dialogue(&quot;I was wondering if after&quot;);&#xA;Dialogue(&quot;all these years, it might be&quot;);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tilesTreePack1_Forest" x="640" y="192" w="32" h="32" xo="704" yo="352" id="10026780" name="inst_F46BC013" depth="10000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

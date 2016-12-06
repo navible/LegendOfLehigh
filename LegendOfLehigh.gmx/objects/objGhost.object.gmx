@@ -30,7 +30,7 @@ event_inherited();
 
 
 // Initial image settings
-SetSpritesScorpion();
+SetSpritesGhost();
 image_xscale = 1.0;
 image_yscale = 1.0;
 

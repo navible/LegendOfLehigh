@@ -43,6 +43,10 @@ alignment = Alignment.top;
 // Create a surface, used for simpler drawing of text (specifically cutting it off when scrolling)
 textSurface = surface_create(512, 96);
 
+ganon = false;
+ganonDead = false;
+dead = false;
+
 </string>
           </argument>
         </arguments>
@@ -65,7 +69,15 @@ textSurface = surface_create(512, 96);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if ganon == true {
+    with (instance_create(x, y, objSquirrelKing)) { ganon = true; stay = true; }
+}
+if ganonDead == true {
+    with (objGanonBattle) dead = true;
+}
+if dead == true {
+    with (objGanonBattle) instance_destroy();
+}
 QuestUpdate();
 
 // Always free your surfaces!
