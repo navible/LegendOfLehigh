@@ -49,6 +49,10 @@ if (!instance_exists(objTransition))
     
     // Progress
     global.wonSTEPS = ini_read_real("Progress", "STEPS", false);
+    global.greenOrb = ini_read_real("Progress", "Green", false);
+    global.purpleOrb = ini_read_real("Progress", "Purple", false);
+    global.redOrb = ini_read_real("Progress", "Red", false);
+    global.blackOrb = ini_read_real("Progress", "Black", false);
     
     // Inventory
     var _tempList = ds_list_create();

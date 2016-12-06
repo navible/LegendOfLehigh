@@ -363,6 +363,51 @@ HitPlayer();
         </arguments>
       </action>
     </event>
+    <event eventtype="9" enumb="106">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (CheckItemEquipped(ItemGetTeleportOrb()) || InventoryFindSlotItem(ItemGetTeleportOrb()) &gt;= 0) {
+    if (CheckItemEquipped(ItemGetPurpleOrb()) || InventoryFindSlotItem(ItemGetPurpleOrb()) &gt;= 0) {
+        if (CheckItemEquipped(ItemGetRedOrb()) || InventoryFindSlotItem(ItemGetRedOrb()) &gt;= 0) {
+            if (CheckItemEquipped(ItemGetBlackOrb()) || InventoryFindSlotItem(ItemGetBlackOrb()) &gt;= 0) {
+            }
+            else {
+                InventoryAdd(ItemGetBlackOrb());
+            }
+        }
+        else {
+            InventoryAdd(ItemGetRedOrb());
+        }
+    }
+    else {
+        InventoryAdd(ItemGetPurpleOrb());
+    }
+}
+else {
+    InventoryAdd(ItemGetTeleportOrb());
+    global.wonSTEPS = true;
+    room_restart();
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

@@ -16,3 +16,4 @@ QuestDialogueBegin(0);
 QuestDialogue("*you feel the ground shake beneath your feet.*");
 QuestCondition(CheckItemInventory, ItemGetRedOrb());
 QuestEffect(EffectSet, 3);
+QuestEffect(EffectPlaceOrb, 319, 179, objRedOrb);

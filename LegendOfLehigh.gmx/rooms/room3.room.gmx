@@ -9,8 +9,15 @@
   <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
-  <showcolour>-1</showcolour>
-  <code></code>
+  <showcolour>0</showcolour>
+  <code>if (global.greenOrb &amp;&amp; global.purpleOrb &amp;&amp; global.redOrb) {
+    with (objSTEPSSquare) instance_destroy();
+    tile_layer_delete(900000);
+}
+else {
+    with (objOrbSquare) instance_destroy();
+    tile_layer_delete(800000);
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -90,6 +97,12 @@
     <instance objName="objWallSquare" x="0" y="256" name="inst_4CE84641" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="224" name="inst_FCE20C04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="0" y="192" name="inst_5ED32F53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSTEPSSquare" x="160" y="32" name="inst_80888FE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSTEPSSquare" x="192" y="32" name="inst_2B4CAAAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSTEPSSquare" x="224" y="32" name="inst_6E4D0E3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOrbSquare" x="256" y="32" name="inst_8F36E5FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOrbSquare" x="288" y="32" name="inst_CE83F84D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOrbSquare" x="320" y="32" name="inst_24721092" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="0" y="0" w="32" h="32" xo="32" yo="320" id="10022634" name="inst_9EF691FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -205,6 +218,12 @@
     <tile bgName="Church" x="224" y="256" w="32" h="32" xo="32" yo="320" id="10022911" name="inst_C3F98C2E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="Church" x="0" y="96" w="32" h="96" xo="160" yo="416" id="10022912" name="inst_318B31A8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="Church" x="160" y="0" w="96" h="32" xo="96" yo="480" id="10022913" name="inst_4E77FDD2" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="160" y="0" w="32" h="64" xo="320" yo="64" id="10027371" name="inst_DE588C6A" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="192" y="0" w="32" h="64" xo="320" yo="64" id="10027372" name="inst_BDB41441" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="224" y="0" w="32" h="64" xo="320" yo="64" id="10027373" name="inst_B0EC2C0B" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="256" y="0" w="32" h="64" xo="320" yo="64" id="10027374" name="inst_BD1D5459" depth="800000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="288" y="0" w="32" h="64" xo="320" yo="64" id="10027375" name="inst_95859564" depth="800000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="320" y="0" w="32" h="64" xo="320" yo="64" id="10027376" name="inst_6E38B713" depth="800000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

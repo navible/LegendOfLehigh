@@ -59,6 +59,10 @@ layerDeac = -1;
 wallType = objWallSquare;
 
 global.wonSTEPS = false;
+global.greenOrb = false;
+global.purpleOrb = false;
+global.redOrb = false;
+global.blackOrb = false;
 </string>
           </argument>
         </arguments>

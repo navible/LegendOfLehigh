@@ -1498,6 +1498,7 @@
           <script>scripts\EffectSpawnObjectContents.gml</script>
           <script>scripts\EffectTeleport.gml</script>
           <script>scripts\EffectSet.gml</script>
+          <script>scripts\EffectPlaceOrb.gml</script>
         </scripts>
         <scripts name="Events">
           <script>scripts\EventLog.gml</script>
@@ -1600,6 +1601,11 @@
       <object>objects\parObstacle</object>
       <object>objects\objWallSquare</object>
       <object>objects\objSTEPSSquare</object>
+      <object>objects\objOrbSquare</object>
+      <object>objects\objDoubleOrbSquare</object>
+      <object>objects\objTripleOrbSquare</object>
+      <object>objects\obj4OrbSquare</object>
+      <object>objects\obj5OrbSquare</object>
       <object>objects\objWallAngle</object>
       <object>objects\objGrass</object>
       <object>objects\object82</object>
@@ -1639,6 +1645,10 @@
     </objects>
     <objects name="Decoration">
       <object>objects\objTorch</object>
+      <object>objects\objGreenOrb</object>
+      <object>objects\objPurpleOrb</object>
+      <object>objects\objRedOrb</object>
+      <object>objects\objBlackOrb</object>
     </objects>
     <objects name="Quests">
       <object>objects\objQuestManager</object>

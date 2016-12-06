@@ -36,6 +36,10 @@ ini_write_string("Player", "Character", global.character);
 
 //Save progress.
 ini_write_real("Progress", "STEPS", global.wonSTEPS);
+ini_write_real("Progress", "Green", global.greenOrb);
+ini_write_real("Progress", "Purple", global.purpleOrb);
+ini_write_real("Progress", "Red", global.redOrb);
+ini_write_real("Progress", "Black", global.blackOrb);
 
 // Save inventory
 with (objInventory)

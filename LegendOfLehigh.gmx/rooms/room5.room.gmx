@@ -9,8 +9,49 @@
   <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
-  <showcolour>-1</showcolour>
-  <code></code>
+  <showcolour>0</showcolour>
+  <code>if (global.greenOrb &amp;&amp; global.purpleOrb &amp;&amp; global.redOrb &amp;&amp; global.blackOrb) {
+    with (objDoubleOrbSquare) instance_destroy();
+    tile_layer_delete(600000);
+    with (objSTEPSSquare) instance_destroy();
+    tile_layer_delete(800000);
+    with (obj4OrbSquare) instance_destroy();
+    tile_layer_delete(400000);
+}
+else {
+    with (objTripleOrbSquare) instance_destroy();
+    tile_layer_delete(500000);
+    if (global.greenOrb &amp;&amp; (global.purpleOrb || global.redOrb)) {
+        with (objSTEPSSquare) instance_destroy();
+        tile_layer_delete(800000);
+        with (obj4OrbSquare) instance_destroy();
+        tile_layer_delete(400000);
+    }
+    else {
+        with (objOrbSquare) instance_destroy();
+        tile_layer_delete(700000);
+        if (global.greenOrb) {
+            with (obj4OrbSquare) instance_destroy();
+            tile_layer_delete(400000);
+        }
+        else {
+            with (obj5OrbSquare) instance_destroy();
+            tile_layer_delete(300000);
+        }
+    }
+}
+if (global.greenOrb) {
+    instance_create(63, 19, objGreenOrb);
+}
+if (global.purpleOrb) {
+    instance_create(63, 179, objPurpleOrb);
+}
+if (global.redOrb) {
+    instance_create(319, 179, objRedOrb);
+}
+if (global.blackOrb) {
+    instance_create(319, 19, objBlackOrb);
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -104,10 +145,25 @@
     <instance objName="objWallSquare" x="320" y="224" name="inst_24C11FEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="64" y="192" name="inst_D7500639" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objWallSquare" x="64" y="224" name="inst_3596ADE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objSign" x="64" y="192" name="instPurpleOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
-    <instance objName="objSign" x="320" y="64" name="instBlackOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
-    <instance objName="objSign" x="320" y="192" name="instRedOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
-    <instance objName="objSign" x="64" y="64" name="instGreenOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="1" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="64" y="192" name="instPurpleOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="0.330000013113022" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="320" y="64" name="instBlackOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="0.333333343267441" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="320" y="192" name="instRedOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="0.333333343267441" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objSign" x="64" y="64" name="instGreenOrbPillar" locked="0" code="DialogueBegin(0);&#xA;Dialogue(&quot;Orbs.&quot;);&#xA;" scaleX="0.330000013113022" scaleY="1" colour="16777215" rotation="0"/>
+    <instance objName="objTripleOrbSquare" x="32" y="32" name="inst_5AE43BBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objTripleOrbSquare" x="32" y="64" name="inst_47653966" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoubleOrbSquare" x="32" y="96" name="inst_0DAD7E20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoubleOrbSquare" x="32" y="128" name="inst_0EBD9855" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDoubleOrbSquare" x="32" y="160" name="inst_4C40AA32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOrbSquare" x="352" y="32" name="inst_99FAF992" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objOrbSquare" x="352" y="64" name="inst_78DABAE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSTEPSSquare" x="352" y="96" name="inst_E39B08A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSTEPSSquare" x="352" y="128" name="inst_3B93C0C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objSTEPSSquare" x="352" y="160" name="inst_DD3D0F94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj4OrbSquare" x="160" y="32" name="inst_36D598DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj4OrbSquare" x="192" y="32" name="inst_7E9A79AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj4OrbSquare" x="224" y="32" name="inst_9A0EC788" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj5OrbSquare" x="128" y="32" name="inst_4A0242C7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj5OrbSquare" x="256" y="32" name="inst_27D4702E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="Church" x="0" y="0" w="32" h="32" xo="32" yo="320" id="10022634" name="inst_9EF691FD" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -227,6 +283,19 @@
     <tile bgName="tilesDungeon" x="64" y="192" w="32" h="32" xo="224" yo="0" id="10026424" name="inst_07461EB9" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesDungeon" x="320" y="224" w="32" h="32" xo="224" yo="96" id="10026425" name="inst_D891635B" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tilesDungeon" x="320" y="192" w="32" h="32" xo="224" yo="0" id="10026426" name="inst_B23CD229" depth="900000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="352" y="96" w="32" h="64" xo="288" yo="64" id="10027382" name="inst_EBA2EA28" depth="800000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="384" y="96" w="32" h="64" xo="288" yo="64" id="10027383" name="inst_4D8B9693" depth="800000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="352" y="0" w="32" h="64" xo="288" yo="64" id="10027388" name="inst_73E16810" depth="700000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="384" y="0" w="32" h="64" xo="288" yo="64" id="10027389" name="inst_6DFFD553" depth="700000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="0" y="96" w="32" h="64" xo="288" yo="64" id="10027393" name="inst_C61555D7" depth="600000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="32" y="96" w="32" h="64" xo="288" yo="64" id="10027394" name="inst_258CD6CB" depth="600000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="0" y="0" w="32" h="64" xo="288" yo="64" id="10027395" name="inst_B767B0EB" depth="500000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="32" y="0" w="32" h="64" xo="288" yo="64" id="10027396" name="inst_D5043BC3" depth="500000" locked="0" colour="4294967295" scaleX="1" scaleY="1.5"/>
+    <tile bgName="background38" x="160" y="0" w="32" h="64" xo="320" yo="64" id="10027397" name="inst_97940168" depth="400000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="192" y="0" w="32" h="64" xo="320" yo="64" id="10027398" name="inst_11C79285" depth="400000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="224" y="0" w="32" h="64" xo="320" yo="64" id="10027399" name="inst_3D34373C" depth="400000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="128" y="0" w="32" h="64" xo="320" yo="64" id="10027400" name="inst_E681CF3E" depth="300000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="background38" x="256" y="0" w="32" h="64" xo="320" yo="64" id="10027401" name="inst_25A878AC" depth="300000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
